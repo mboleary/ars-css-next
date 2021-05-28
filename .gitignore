@@ -2,3 +2,9 @@
 *.css.map
 *.sass.map
 *.scss.map
+
+
+# Project-specific things
+
+build/css
+build
