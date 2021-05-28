@@ -1,0 +1,32 @@
+// Lists all colors
+
+@use 'sass:map';
+@use 'sass:color';
+// This theme makes use of n-many accent colors, but will likely make use of the lowest indexed elements more often
+$accent-colors: (1:#BBE524, 2:#2682A6, 3:#FF230F, 4:#FB9902);
+
+// These colors define the background and foreground colors
+$dark-color: #002C3D;
+$light-color: white;
+
+// Error and Warning
+$error-color: #FF230F;
+$warn-color: #FFC30F;
+
+// UI Colors
+$highlight-color: #FFFF00;
+$link-color-normal: map.get($accent-colors, 1);
+$link-color-hover: color.adjust(map.get($accent-colors, 1), $lightness: -10%);
+
+@each $index, $color in $accent-colors {
+    .accent-#{$index} {
+        color: $color;
+        // border-color: $color
+    }
+
+    .bg-accent-#{$index} {
+        background-color: $color;
+        // border-color: $color
+    }
+}
+

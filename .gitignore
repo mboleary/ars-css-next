@@ -6,5 +6,8 @@
 
 # Project-specific things
 
-build/css
 build
+font
+
+demos/css
+demos/font

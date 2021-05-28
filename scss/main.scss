@@ -1,7 +1,10 @@
 // Contains the main boilerplate
 
-$primary-color: #FF0000;
+@use 'colors';
+@use 'fonts';
+
+// $primary-color: map.get(colors.$accent-colors, "1");
 
 body {
-    background-color: $primary-color;
+    // background-color: $primary-color;
 }
