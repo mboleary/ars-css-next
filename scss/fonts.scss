@@ -1,46 +1,47 @@
 // Defines all of the fonts used
 
 $font-path: "/font";
-$font-extension: ".woff2";
+$font-format: "woff2";
+$font-extension: "." + $font-format;
 
 @font-face {
     font-family: extrabold;
-    src: url($font-path + '/LeagueMono-ExtraBold' + $font-extension);
+    src: url($font-path + '/LeagueMono-ExtraBold' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: bold;
-    src: url($font-path + '/LeagueMono-Bold' + $font-extension);
+    src: url($font-path + '/LeagueMono-Bold' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: semibold;
-    src: url($font-path + '/LeagueMono-SemiBold' + $font-extension);
+    src: url($font-path + '/LeagueMono-SemiBold' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: medium;
-    src: url($font-path + '/LeagueMono-Medium' + $font-extension);
+    src: url($font-path + '/LeagueMono-Medium' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: regular;
-    src: url($font-path + '/LeagueMono-Regular' + $font-extension);
+    src: url($font-path + '/LeagueMono-Regular' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: thin;
-    src: url($font-path + '/LeagueMono-Thin' + $font-extension);
+    src: url($font-path + '/LeagueMono-Thin' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: light;
-    src: url($font-path + '/LeagueMono-Light' + $font-extension);
+    src: url($font-path + '/LeagueMono-Light' + $font-extension) format($font-format);
 }
 
 @font-face {
     font-family: ultralight;
-    src: url($font-path + '/LeagueMono-UltraLight' + $font-extension);
+    src: url($font-path + '/LeagueMono-UltraLight' + $font-extension) format($font-format);
 }
 
 // Define which elements use these fonts
@@ -50,7 +51,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: title
+    font-family: extrabold
 }
 
 h4, h5, h6 {
