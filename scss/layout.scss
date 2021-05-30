@@ -1,0 +1,55 @@
+// Contains the layout classes
+
+$content-width: 1024px;
+
+$default-margin: 5px;
+
+// Breakpoints
+$breakpoint-small: 768px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1080px;
+
+// Mixins
+
+@mixin container($width: $content-width, $margin: auto) {
+    margin: 0% $margin;
+    overflow: auto;
+    max-width: $width;
+}
+
+// Container Classes
+.container {
+    @include container;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+    .container {
+        @include container($width: unset, $margin: $default-margin);
+    }
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+// Element styling
+
+body {
+    margin: 0;
+}
+
+h1,h2,h3 {
+    margin: ($default-margin * 2) 0;
+}
+
+h4,h5,h6 {
+    margin: $default-margin 0;
+}
+
+p {
+    margin: ($default-margin * 2) 0;
+}

@@ -5,18 +5,44 @@
 // This theme makes use of n-many accent colors, but will likely make use of the lowest indexed elements more often
 $accent-colors: (1:#BBE524, 2:#2682A6, 3:#FF230F, 4:#FB9902);
 
-// These colors define the background and foreground colors
-$dark-color: #002C3D;
-$light-color: white;
-
 // Error and Warning
 $error-color: #FF230F;
 $warn-color: #FFC30F;
 
+// These colors define the background and foreground colors
+$background-color-dark: #002C3D;
+$background-color-light: white;
+
+// Text Colors
+$text-color-dark: white;
+$text-color-light: black;
+
 // UI Colors
 $highlight-color: #FFFF00;
+$hr-color: #999;
+
+// Calculated colors to use for the application
 $link-color-normal: map.get($accent-colors, 1);
 $link-color-hover: color.adjust(map.get($accent-colors, 1), $lightness: -10%);
+
+// Constants
+
+$grays: (
+    1: #111,
+    2: #222,
+    3: #333,
+    4: #444,
+    5: #555,
+    6: #666,
+    7: #777,
+    8: #888,
+    9: #999,
+    a: #aaa,
+    b: #bbb,
+    c: #ccc,
+    d: #ddd,
+    e: #eee
+);
 
 @each $index, $color in $accent-colors {
     .accent-#{$index} {
@@ -30,4 +56,36 @@ $link-color-hover: color.adjust(map.get($accent-colors, 1), $lightness: -10%);
     }
 }
 
-// Add Dark Theme (also allow forcing with body[dark]
+@mixin bg-color($color: $background-color-light) {
+    background-color: $color;
+}
+
+@mixin text-color($color: $text-color-light) {
+    color: $color;
+}
+
+// Light (default) theme
+
+.bg-color {
+    @include bg-color($background-color-light);
+    @include text-color($text-color-light);
+}
+
+body {
+    @include bg-color($background-color-light);
+    @include text-color($text-color-light);
+}
+
+// Dark Theme (also allow forcing with body[dark])
+
+@media only screen and (prefers-color-scheme: dark) {
+    body {
+        @include bg-color($background-color-dark);
+        @include text-color($text-color-dark);
+    }
+}
+
+body[dark] {
+    @include bg-color($background-color-dark);
+    @include text-color($text-color-dark);
+}

@@ -2,9 +2,29 @@
 
 @use 'colors';
 @use 'fonts';
+@use 'layout';
 
-// $primary-color: map.get(colors.$accent-colors, "1");
+.vbar {
+    border-left: layout.$default-margin solid currentColor;
+    padding-left: layout.$default-margin;
+}
+
+.hbar {
+    border-bottom: 1px solid currentColor;
+}
+
+// Light Theme
 
 body {
-    // background-color: $primary-color;
+    background-color: colors.$background-color-light;
+    color: colors.$text-color-light;
+}
+
+// Dark mode
+
+@media only screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-background);
+        color: var(--dark-text-color);
+    }
 }
