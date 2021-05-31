@@ -17,6 +17,11 @@ $default-bg-color: map.get(colors.$accent-colors, 1);
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    .img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
 .banner {
