@@ -3,6 +3,9 @@
 *.sass.map
 *.scss.map
 
+# NPM
+package-lock.json
+node_modules/
 
 # Project-specific things
 
