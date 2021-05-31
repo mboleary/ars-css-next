@@ -1,13 +1,17 @@
 // Contains the layout classes
 
+@use 'sass:map';
+
 $content-width: 1024px;
 
 $default-margin: 5px;
 
 // Breakpoints
-$breakpoint-small: 768px;
-$breakpoint-medium: 960px;
-$breakpoint-large: 1080px;
+$breakpoints: (
+    0: 768px,
+    1: 960px,
+    2: 1080px
+);
 
 // Mixins
 
@@ -21,10 +25,21 @@ $breakpoint-large: 1080px;
 .container {
     @include container;
 }
-
-@media only screen and (max-width: $breakpoint-small) {
-    .container {
-        @include container($width: unset, $margin: $default-margin);
+@each $index, $size in $breakpoints {
+    @if $index == 0 {
+        @media only screen and (max-width: $size) {
+            .container {
+                @include container($width: unset, $margin: $default-margin);
+            }
+        }
+    }
+    @else {
+        $prev-size: map.get($breakpoints, $index - 1);
+        @media only screen and (max-width: $size) and (min-width: ($prev-size + 1)) {
+            .container {
+                @include container($width: $prev-size - 10);
+            }
+        }
     }
 }
 
@@ -36,10 +51,46 @@ $breakpoint-large: 1080px;
     width: 100%;
 }
 
+// Flex classes
+.flex-layout {
+    display: flex;
+    .horizontal {
+        flex-direction: column;
+        .reverse {
+            flex-direction: column-reverse;
+        }
+    }
+    .vertical {
+        flex-direction: row;
+        .reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    .wrap {
+        flex-wrap: wrap;
+    }
+    .center {
+        align-items: center;
+    }
+}
+
+.flex {
+    flex: 1 1 auto;
+}
+
+.flex-grow {
+    flex: 1 0 auto
+}
+
+.flex-shrink {
+    flex: 0 1 auto;
+}
+
 // Element styling
 
 body {
     margin: 0;
+    height: 100vh;
 }
 
 h1,h2,h3 {

@@ -64,6 +64,11 @@ $grays: (
     color: $color;
 }
 
+@mixin backdrop-small($color, $alpha: -0.5) {
+    background-color: color.adjust($color, $alpha: -0.5);
+    box-shadow: 0 0 10px $color;
+}
+
 // Light (default) theme
 
 .bg-color {
@@ -76,6 +81,10 @@ body {
     @include text-color($text-color-light);
 }
 
+.backdrop-small {
+    @include backdrop-small($background-color-light, $alpha: -0.5);
+}
+
 // Dark Theme (also allow forcing with body[dark])
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -83,9 +92,52 @@ body {
         @include bg-color($background-color-dark);
         @include text-color($text-color-dark);
     }
+
+    .bg-color {
+        @include bg-color($background-color-dark);
+        @include text-color($text-color-dark);
+    }
+
+    .backdrop-small {
+        @include backdrop-small($background-color-dark);
+    }
 }
 
 body[dark] {
     @include bg-color($background-color-dark);
     @include text-color($text-color-dark);
+    .bg-color {
+        @include bg-color($background-color-dark);
+        @include text-color($text-color-dark);
+    }
+    .backdrop-small {
+        @include backdrop-small($background-color-dark);
+    }
 }
+
+// Gradients
+
+@function lingrad1($deg, $color) {
+    $c1: color.adjust($color, $lightness: -30%);
+    $c2: $color;
+    @return linear-gradient($deg, $c1 0%, $c2 100%);
+}
+
+@function lingrad2($deg, $color1, $color2) {
+    @return linear-gradient($deg, $color1 0%, $color2 100%);
+}
+
+// Variations on the accent colors
+
+@each $index, $color in $accent-colors {
+    .bg-gradient-a#{$index} {
+        background: lingrad1($deg: 103deg, $color: $color);
+    }
+
+    @each $index2, $color2 in $accent-colors {
+        .bg-gradient-a#{$index}-a#{$index2} {
+            background: lingrad2($deg: 45deg, $color1: $color, $color2: $color2);
+        }
+    }
+}
+
