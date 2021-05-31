@@ -15,4 +15,5 @@ font
 demos/css
 demos/font
 demos/scss
+demos/node_modules
 temp

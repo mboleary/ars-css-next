@@ -1,8 +1,8 @@
 #!/bin/bash
-ln -s ../build demos/css
-ln -s ../font demos/font
-ln -s ../scss demos/scss
-
 cd demos
+ln -s ../build css
+ln -s ../font
+ln -s ../scss
+ln -s ../node_modules
 
 python3 -m http.server 8000 --bind localhost
