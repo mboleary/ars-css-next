@@ -1,6 +1,7 @@
 #!/bin/bash
-cp -r build/. demos/css
-cp -r font/. demos/font
+ln -s ../build demos/css
+ln -s ../font demos/font
+ln -s ../scss demos/scss
 
 cd demos
 
