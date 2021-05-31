@@ -10,7 +10,8 @@ $error-color: #FF230F;
 $warn-color: #FFC30F;
 
 // These colors define the background and foreground colors
-$background-color-dark: #002C3D;
+// $background-color-dark: #002C3D;
+$background-color-dark: #111;
 $background-color-light: white;
 
 // Text Colors
@@ -135,9 +136,20 @@ body[dark] {
     }
 
     @each $index2, $color2 in $accent-colors {
-        .bg-gradient-a#{$index}-a#{$index2} {
-            background: lingrad2($deg: 45deg, $color1: $color, $color2: $color2);
+        @if $color2 != $color {
+            .bg-gradient-a#{$index}-a#{$index2} {
+                background: lingrad2($deg: 45deg, $color1: $color, $color2: $color2);
+            }
         }
     }
 }
 
+// Get white or black for title text
+
+@function getTextColor($color: white) {
+    @if color.blackness($color) < 50% {
+        @return white;
+    } @else {
+        @return black;
+    }
+}

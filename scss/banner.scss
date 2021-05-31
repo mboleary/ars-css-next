@@ -1,0 +1,30 @@
+// Contains the banners (used to be called flashcards and titlecards)
+
+@use 'colors';
+@use "sass:map";
+
+// Sizes
+$banner-size: 100vh;
+$title-banner-size: 50vh; // @TODO Change this later
+
+$default-bg-color: map.get(colors.$accent-colors, 1);
+
+%gen-banner {    
+    background-attachment: fixed;
+    // We add flex to have it built-in
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    @extend %gen-banner;
+    height: $banner-size;
+}
+
+.title-banner {
+    @extend %gen-banner;
+    height: $title-banner-size;
+}
