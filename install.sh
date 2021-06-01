@@ -4,6 +4,8 @@
 
 npm i
 
+ROOT_DIR=$(pwd)
+
 mkdir temp
 
 cd temp
@@ -12,10 +14,13 @@ wget -O leaguemono.tar.xz https://github.com/theleagueof/league-mono/releases/do
 
 wget -O feather.tar.gz https://github.com/feathericons/feather/archive/refs/tags/v4.28.0.tar.gz
 
-tar -xzf leaguemono.tar.xz
-tar -xzf feather.tar.gz
+tar -xf leaguemono.tar.xz
+tar -xf feather.tar.gz
 
-cp leaguemono/static/WOFF2/* ../font
+feather_dir=$(ls -l | grep "^d" | awk '{print $9}')
+leaguemono_dir=$(ls -l | grep "^d" | awk '{print $9}')
+
+# cp leaguemono/static/WOFF2/* $ROOT_DIR/font
 
 # cp feather
 
