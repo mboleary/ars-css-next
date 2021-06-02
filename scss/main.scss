@@ -16,18 +16,21 @@
     border-bottom: 1px solid currentColor;
 }
 
-// Light Theme
+// Links
 
-body {
-    background-color: colors.$background-color-light;
-    color: colors.$text-color-light;
+a:link, a:visited {
+    color: colors.$link-color-normal;
+    text-decoration: none;
 }
 
-// Dark mode
+a:hover, a:active {
+    color: colors.$link-color-hover;
+    text-decoration: none;
+}
 
-@media only screen and (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--dark-background);
-        color: var(--dark-text-color);
-    }
+// hr
+
+hr {
+    border-style: solid;
+    margin: (layout.$default-margin * 2) 0;
 }

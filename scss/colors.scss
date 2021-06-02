@@ -23,8 +23,9 @@ $highlight-color: #FFFF00;
 $hr-color: #999;
 
 // Calculated colors to use for the application
-$link-color-normal: map.get($accent-colors, 1);
-$link-color-hover: color.adjust(map.get($accent-colors, 1), $lightness: -10%);
+// $link-color-normal: map.get($accent-colors, 1);
+$link-color-normal: color.adjust(map.get($accent-colors, 1), $lightness: -20%);
+$link-color-hover: map.get($accent-colors, 1);
 
 // Constants
 
@@ -86,6 +87,10 @@ body {
     @include backdrop-small($background-color-light, $alpha: -0.5);
 }
 
+hr {
+    border-color: $text-color-light;
+}
+
 // Dark Theme (also allow forcing with body[dark])
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -102,6 +107,10 @@ body {
     .backdrop-small {
         @include backdrop-small($background-color-dark);
     }
+
+    hr {
+        border-color: $text-color-dark;
+    }
 }
 
 body[dark] {
@@ -113,6 +122,24 @@ body[dark] {
     }
     .backdrop-small {
         @include backdrop-small($background-color-dark);
+    }
+
+    hr {
+        border-color: $text-color-dark;
+    }
+}
+
+.fg-light-color {
+    color: $text-color-light;
+    hr {
+        border-color: $text-color-light;
+    }
+}
+
+.fg-dark-color {
+    color: $text-color-dark;
+    hr {
+        border-color: $text-color-dark;
     }
 }
 
