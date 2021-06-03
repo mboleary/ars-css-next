@@ -3,8 +3,19 @@
     <head>
         <title>Testing Ars CSS NEXT styling</title>
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
     </head>
-    <body  class="">
+    <body dark class="">
         <div class="title-banner bg-gradient-a4-a3 fg-dark-color">
             <div class="container text-center">
                 <h1 class="">Test page</h1>
@@ -26,7 +37,28 @@
 
             <p> Here is a link </p>
 
+            <blockquote>
+                This is a test
+                This is a test
+                This is a test
+                This is a test
+                This is a test
+                This is a test
+                This is a test
+                This is a test
+            </blockquote>
+
+            <p>
+                From a keyboard: <kbd class="dark">Ctrl</kbd> + <kbd>A</kbd> + <kbd>&nbsp;</kbd> + <kbd class="dark">&nbsp;</kbd> Other text
+            </p>
+
+            <samp>This is a sample</samp>
+
             <a href="http://arsmachina.net">This is a link to my website</a>
+
+            <hr>
+
+            <button onclick="toggleDark()">Toggle Dark mode</button>
         </div>
     </body>
 </html>

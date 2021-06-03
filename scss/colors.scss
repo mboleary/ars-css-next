@@ -23,7 +23,6 @@ $highlight-color: #FFFF00;
 $hr-color: #999;
 
 // Calculated colors to use for the application
-// $link-color-normal: map.get($accent-colors, 1);
 $link-color-normal: color.adjust(map.get($accent-colors, 1), $lightness: -20%);
 $link-color-hover: map.get($accent-colors, 1);
 
