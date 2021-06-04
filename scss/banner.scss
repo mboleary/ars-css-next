@@ -5,7 +5,7 @@
 
 // Sizes
 $banner-size: 100vh;
-$title-banner-size: 50vh; // @TODO Change this later
+$title-banner-size: min(50vh, 680px); // @TODO Change this later
 
 $default-bg-color: map.get(colors.$accent-colors, 1);
 
