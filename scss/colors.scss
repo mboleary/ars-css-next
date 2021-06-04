@@ -21,6 +21,7 @@ $text-color-light: black;
 // UI Colors
 $highlight-color: #FFFF00;
 $hr-color: #999;
+$shadow-color: #aaa;
 
 // Calculated colors to use for the application
 $link-color-normal: color.adjust(map.get($accent-colors, 1), $lightness: -20%);

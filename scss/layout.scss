@@ -122,3 +122,7 @@ h4,h5,h6 {
 p {
     margin: ($default-margin * 2) 0;
 }
+
+img.cover {
+    object-fit: cover;
+}

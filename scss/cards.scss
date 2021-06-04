@@ -5,10 +5,11 @@
 @use 'colors';
 @use 'layout';
 
-// @TODO consider splitting this out into several cards
+$border-radius: 5px;
 
+// @TODO consider splitting this out into several cards
 .content-card {
-    border-radius: 5px;
+    border-radius: $border-radius;
     border: 1px solid map.get(colors.$grays, 3);
     padding: (layout.$default-margin * 2);
     min-width: layout.$min-width;
@@ -24,6 +25,19 @@
     }
     &.no-padding {
         padding: 0;
+    }
+    &.shadow {
+        box-shadow: 0 1px 10px colors.$shadow-color;
+        margin-left: 10px;
+    }
+    // Fixes child elements not having rounded corners
+    .round-top-corners {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+    .round-bottom-corners {
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
 }
 
