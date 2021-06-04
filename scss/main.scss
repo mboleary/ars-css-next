@@ -73,3 +73,13 @@ button, input[type="button"] {
         }
     }
 }
+
+// Special Backgrounds
+
+.bg-blur {
+    backdrop-filter: blur(10px);
+}
+
+.bg-darken {
+    background-color: #00000055;
+}

@@ -20,7 +20,7 @@ $subtitle-font-size: 1.5em;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    .img {
+    &.img {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -39,11 +39,15 @@ $subtitle-font-size: 1.5em;
 .banner {
     @extend %gen-banner;
     height: $banner-size;
-    @extend %banner-fonts;
+    &:not(.no-title-resize) {
+        @extend %banner-fonts;
+    }
 }
 
 .title-banner {
     @extend %gen-banner;
     height: $title-banner-size;
-    @extend %banner-fonts;
+    &:not(.no-title-resize) {
+        @extend %banner-fonts;
+    }
 }
