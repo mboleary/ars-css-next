@@ -173,7 +173,7 @@ body[dark] {
 // Get white or black for title text
 
 @function getTextColor($color: white) {
-    @if color.blackness($color) < 50% {
+    @if color.blackness($color) < 10% {
         @return white;
     } @else {
         @return black;

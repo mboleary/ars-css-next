@@ -49,3 +49,26 @@ kbd.dark {
     border-color: white;
     color: white;
 }
+
+// Buttons
+
+button, input[type="button"] {
+    padding: (layout.$default-margin * 2);
+    font-family: medium;
+    border-radius: 2px;
+    border: 1px solid currentColor;
+    color: currentColor;
+    background-color: transparent;
+    @each $index, $color in colors.$accent-colors {
+        .accent-#{$index} {
+            border-color: $color;
+            color: $color;
+        }
+
+        &:hover.accent-#{$index} {
+            border-color: transparent;
+            background-color: $color;
+            color: colors.getTextColor($color);
+        }
+    }
+}
