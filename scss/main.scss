@@ -4,8 +4,9 @@
 @use 'fonts';
 @use 'layout';
 
-// Component styling
+// Components
 @use 'banner';
+@use 'cards';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;

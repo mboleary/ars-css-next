@@ -13,6 +13,10 @@ $breakpoints: (
     2: 1080px
 );
 
+// Min Width for cards
+$min-width: 240px;
+$default-width: 240px;
+
 // Mixins
 
 @mixin container($width: $content-width, $margin: auto) {
@@ -51,25 +55,29 @@ $breakpoints: (
     width: 100%;
 }
 
+.text-center {
+    text-align: center;
+}
+
 // Flex classes
 .flex-layout {
     display: flex;
-    .horizontal {
+    &.horizontal {
         flex-direction: column;
         .reverse {
             flex-direction: column-reverse;
         }
     }
-    .vertical {
+    &.vertical {
         flex-direction: row;
         .reverse {
             flex-direction: row-reverse;
         }
     }
-    .wrap {
+    &.wrap {
         flex-wrap: wrap;
     }
-    .center {
+    &.center {
         align-items: center;
     }
 }
@@ -86,8 +94,14 @@ $breakpoints: (
     flex: 0 1 auto;
 }
 
-.text-center {
-    text-align: center;
+// Constant Height
+
+.height-10 {
+    height: 10px;
+}
+
+.height-20 {
+    height: 20px;
 }
 
 // Element styling
