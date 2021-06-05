@@ -10,9 +10,11 @@ $fg-color: #333;
 .text-section {
     background-color: $bg-color;
     border-left: 5px solid $fg-color;
-    margin: 5px 0;
     padding: 10px 10px 10px 5px;
     color: $fg-color;
+    &:not(.no-margin) {
+        margin: 5px 0;
+    }
     p {
         margin: 0px;
     }
