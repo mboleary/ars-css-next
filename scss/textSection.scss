@@ -1,0 +1,42 @@
+// Defines Text Sections
+
+@use 'sass:color';
+@use 'colors';
+
+// Local Colors
+$bg-color: #eee;
+$fg-color: #333;
+
+.text-section {
+    background-color: $bg-color;
+    border-left: 5px solid $fg-color;
+    margin: 5px 0;
+    padding: 10px 10px 10px 5px;
+    color: $fg-color;
+    p {
+        margin: 0px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            background-color: color.adjust($color, $lightness: 50%);
+            border-color: $color;
+            color: $color;
+        }
+    }
+
+    &.error {
+        background-color: color.adjust(colors.$error-color, $lightness: 50%);
+        border-color: colors.$error-color;
+        color: colors.$error-color;
+    }
+
+    &.warn {
+        background-color: color.adjust(colors.$warn-color, $lightness: 50%);
+        border-color: colors.$warn-color;
+        color: colors.$warn-color;
+    }
+}
