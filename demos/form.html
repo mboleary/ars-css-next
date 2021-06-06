@@ -35,38 +35,37 @@
         <!-- Page content goes here -->
 
         <form action="#" target="_blank" method="get">
-
+            <div class="app-bar flex-layout vertical">
+                <h1> This is an Info Form </h1>
+            </div>
+            <div class="body">
+                <p> Give us some feedback! We'd love to hear from you! </p>
+                <!-- Note: Fieldset is meant for a PART of a form, not the whole
+                form -->
+                <fieldset class=" required">
+                    <label> Name </label><br>
+                    <input type="text" required><br>
+                </fieldset>
+                <fieldset class=" required error">
+                    <label> Email </label><br>
+                    <input type="email" required><br>
+                    <p class="errors"> Please Enter a Valid Email Address. </p>
+                </fieldset>
+                <fieldset class="">
+                    <label> What Best Describes You? </label><br>
+                    <input type="radio" name="type" value="student"> Student <br>
+                    <input type="radio" name="type" value="instructor"> Instructor <br>
+                    <input type="radio" name="type" value="admin"> Administration <br>
+                    <input type="radio" name="type" value="other"> Other <br>
+                </fieldset>
+                <fieldset>
+                    <label> Comments </label><br>
+                    <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
+                </fieldset>
+                <hr>
+                <input type="submit" value="Submit">
+            </div>
         </form>
-        <div class="app-bar flex-layout vertical">
-            <h1> This is an Info Form </h1>
-        </div>
-        <div class="body">
-            <p> Give us some feedback! We'd love to hear from you! </p>
-            <!-- Note: Fieldset is meant for a PART of a form, not the whole
-              form -->
-            <fieldset class="container required">
-                <label> Name </label><br>
-                <input type="text"><br>
-            </fieldset>
-            <fieldset class="container required error">
-                <label> Email </label><br>
-                <input type="email"><br>
-                <p class="errors"> Please Enter a Valid Email Address. </p>
-            </fieldset>
-            <fieldset class="container">
-                <label> What Best Describes You? </label><br>
-                <input type="radio" name="type" value="student"> Student <br>
-                <input type="radio" name="type" value="instructor"> Instructor <br>
-                <input type="radio" name="type" value="admin"> Administration <br>
-                <input type="radio" name="type" value="other"> Other <br>
-            </fieldset>
-            <fieldset>
-                <label> Comments </label><br>
-                <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
-            </fieldset>
-            <hr>
-            <input type="submit" value="Submit">
-        </div>
         <hr>
         <button onclick="toggleDark()">Toggle Dark mode</button>
     </div>

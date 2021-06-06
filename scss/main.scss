@@ -9,6 +9,7 @@
 @use 'cards';
 @use 'textSection';
 @use 'appBar';
+@use 'form';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;

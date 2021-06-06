@@ -1,2 +1,22 @@
 // Styling for Form elements
 
+@use 'colors';
+@use 'layout';
+
+$border-color: #333;
+$fieldset-margin: layout.$default-margin * 2;
+$body-padding: layout.$default-margin * 2;
+
+form .body {
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-top: 0px;
+    padding: $body-padding;
+}
+
+form fieldset {
+    border: 0;
+    padding: 0;
+    margin: $fieldset-margin 0;
+}
