@@ -5,9 +5,6 @@
 @use 'colors';
 @use 'layout';
 
-$caption-bg-color: #999;
-$caption-text-color: white;
-
 $footer-bg-color: white;
 $footer-text-color: map.get(colors.$accent-colors, 2);
 
@@ -45,8 +42,6 @@ table {
 
 table caption {
     text-align: center;
-    // background-color: $caption-bg-color;
-    // color: $caption-text-color;
     font-family: bold;
     padding: (layout.$default-margin * 2);
 }
@@ -63,32 +58,33 @@ table tbody {
 }
 
 table tfoot {
-    color: $footer-text-color;
+    // color: $footer-text-color;
+    font-family: medium;
 }
 
-table tr:nth-child(even) {
+// Zebra-striping
+
+table tbody tr:nth-child(even) {
     background-color: $table-n0-color;
 }
 
-table tr:nth-child(odd) {
+table tbody tr:nth-child(odd) {
     background-color: $table-n1-color;
 }
+
+// Table cells
 
 table th {
     padding: (layout.$default-margin * 2);
     font-family: semibold;
 }
 
-table td {
-    padding: (layout.$default-margin * 2);
-    border: 1px solid #aaa;
-    @extend %border-color;
-}
 
 table tr.active {
     font-weight: bold;
 }
 
+// Hover state
 table tbody tr:hover td {
     color: $row-light-highlight-color;
     @media only screen and (prefers-color-scheme: dark) {
@@ -102,8 +98,14 @@ table tbody tr:hover td {
     }
 }
 
+table td {
+    padding: (layout.$default-margin * 2);
+    border: 1px solid #aaa;
+    @extend %border-color;
+}
+
+
 table tfoot td {
     border: 1px solid #aaa;
     @extend %border-color;
-    font-family: medium;
 }
