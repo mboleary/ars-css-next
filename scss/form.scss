@@ -6,6 +6,7 @@
 $border-color: #aaa;
 $error-color: colors.$error-color;
 $disabled-color: #999;
+$input-bg-color: white;
 $fieldset-margin: layout.$default-margin * 2;
 $body-padding: layout.$default-margin * 2;
 $form-font: light;
@@ -69,17 +70,32 @@ legend {
     }
 }
 
+%vertical-resize {
+    min-height: 16px;
+    resize: vertical;
+}
+
 select {
     @extend %input-element;
+    background-color: $input-bg-color;
+    &[multiple] {
+        @extend %vertical-resize;
+        min-height: 56px; // This element resizes differently from the textarea
+    }
 }
 
 textarea {
     @extend %input-element;
     border-radius: 5px 5px 0px 5px;
-    min-height: 16px;
-    resize: vertical;
+    @extend %vertical-resize;
 }
 
 input {
-    @extend %input-element;
+    &:not([type="image"]) {
+        @extend %input-element;
+    }
+}
+
+input[type="image"] {
+    width: 100%;
 }

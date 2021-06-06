@@ -42,8 +42,6 @@
             </div>
             <div class="body">
                 <p> Give us some feedback! We'd love to hear from you! </p>
-                <!-- Note: Fieldset is meant for a PART of a form, not the whole
-                form -->
                 <fieldset class="flex-layout horizontal required">
                     <label> Name </label>
                     <input type="text" required>
@@ -76,29 +74,50 @@
                 </div>
             </div>
             <div class="body">
-                <p> Give us some feedback! We'd love to hear from you! </p>
-                <!-- Note: Fieldset is meant for a PART of a form, not the whole
-                form -->
-                <fieldset class="flex-layout horizontal required">
+                <p> This form has the rest of the elements in it </p>
+                <fieldset class="flex-layout horizontal">
                     <legend>Test</legend>
-                    <label> Name </label>
-                    <input type="text" required>
+                    <label> Car </label>
+                    <select name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab" selected>Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
                 </fieldset>
-                <fieldset class="flex-layout horizontal  required error">
-                    <label> Email </label>
-                    <input type="email" required>
-                    <p class="errorText"><small> Please Enter a Valid Email Address. </small></p>
+                <fieldset class="flex-layout horizontal">
+                    <label> Cars (select multiple) </label>
+                    <select name="cars2" size="3" multiple>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab" selected>Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
                 </fieldset>
+               
                 <fieldset class="flex-layout horizontal ">
                     <label> What Best Describes You? </label>
-                    <label class="option"><input type="radio" name="type" value="student"> Student</label> 
-                    <label class="option"><input type="radio" name="type" value="instructor"> Instructor</label> 
-                    <label class="option"><input type="radio" name="type" value="admin"> Administration</label> 
-                    <label class="option"><input type="radio" name="type" value="other"> Other</label> 
+                    <label class="option"><input type="checkbox" name="checkdemo" value="student"> Student</label> 
+                    <label class="option"><input type="checkbox" name="checkdemo" value="instructor"> Instructor</label> 
+                    <label class="option"><input type="checkbox" name="checkdemo" value="admin"> Administration</label> 
+                    <label class="option"><input type="checkbox" name="checkdemo" value="other"> Other</label> 
                 </fieldset>
                 <fieldset class="flex-layout horizontal ">
-                    <label> Comments </label>
-                    <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
+                    <label> Date </label>
+                    <input type="date" name="bday">
+                </fieldset>
+                <fieldset class="flex-layout horizontal ">
+                    <label> Date and Time </label>
+                    <input type="datetime-local" name="bdaytime">
+                </fieldset>
+                <fieldset class="flex-layout horizontal ">
+                    <label> File </label>
+                    <input type="file" name="myFile">
+                </fieldset>
+                <fieldset class="flex-layout horizontal ">
+                    <label> Image </label>
+                    <input type="image" src="static/img1.jpg" alt="Image input">
+                    <p><small>Clicking on this will cause the form to submit</small></p>
                 </fieldset>
                 <hr>
                 <input type="submit" value="Submit">
