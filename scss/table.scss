@@ -1,0 +1,109 @@
+// Contains the table styling
+
+@use'sass:map';
+
+@use 'colors';
+@use 'layout';
+
+$caption-bg-color: #999;
+$caption-text-color: white;
+
+$footer-bg-color: white;
+$footer-text-color: map.get(colors.$accent-colors, 2);
+
+$header-bg-color: colors.$dark-color;
+$header-fg-color: white;
+
+$table-n0-color: #ffffff11;
+$table-n1-color: #00000011;
+$table-text-color: black;
+
+$row-light-highlight-color: #555;
+$row-dark-highlight-color: #aaa;
+
+%border-color {
+    border-color: colors.$border-color-light;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            border-color: colors.$border-color-dark;
+        }
+    }
+
+    body[dark] & {
+        border-color: colors.$border-color-dark;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    margin: (layout.$default-margin * 2) 0;
+    border: 1px solid #aaa;
+    @extend %border-color;
+}
+
+table caption {
+    text-align: center;
+    // background-color: $caption-bg-color;
+    // color: $caption-text-color;
+    font-family: bold;
+    padding: (layout.$default-margin * 2);
+}
+
+// Table sections have the color, font and background color
+
+table thead {
+    background-color: $header-bg-color;
+    color: $header-fg-color;
+}
+
+table tbody {
+    font-family: light;
+}
+
+table tfoot {
+    color: $footer-text-color;
+}
+
+table tr:nth-child(even) {
+    background-color: $table-n0-color;
+}
+
+table tr:nth-child(odd) {
+    background-color: $table-n1-color;
+}
+
+table th {
+    padding: (layout.$default-margin * 2);
+    font-family: semibold;
+}
+
+table td {
+    padding: (layout.$default-margin * 2);
+    border: 1px solid #aaa;
+    @extend %border-color;
+}
+
+table tr.active {
+    font-weight: bold;
+}
+
+table tbody tr:hover td {
+    color: $row-light-highlight-color;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            color: $row-dark-highlight-color;
+        }
+    }
+
+    body[dark] & {
+        color: $row-dark-highlight-color;
+    }
+}
+
+table tfoot td {
+    border: 1px solid #aaa;
+    @extend %border-color;
+    font-family: medium;
+}

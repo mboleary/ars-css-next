@@ -10,6 +10,7 @@
 @use 'textSection';
 @use 'appBar';
 @use 'form';
+@use 'table';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;
