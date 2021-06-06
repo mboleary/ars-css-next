@@ -42,24 +42,24 @@
                 <p> Give us some feedback! We'd love to hear from you! </p>
                 <!-- Note: Fieldset is meant for a PART of a form, not the whole
                 form -->
-                <fieldset class=" required">
-                    <label> Name </label><br>
-                    <input type="text" required><br>
+                <fieldset class="flex-layout horizontal required">
+                    <label> Name </label>
+                    <input type="text" required>
                 </fieldset>
-                <fieldset class=" required error">
-                    <label> Email </label><br>
-                    <input type="email" required><br>
-                    <p class="errors"> Please Enter a Valid Email Address. </p>
+                <fieldset class="flex-layout horizontal  required error">
+                    <label> Email </label>
+                    <input type="email" required>
+                    <p class="errorText"><small> Please Enter a Valid Email Address. </small></p>
                 </fieldset>
-                <fieldset class="">
-                    <label> What Best Describes You? </label><br>
-                    <input type="radio" name="type" value="student"> Student <br>
-                    <input type="radio" name="type" value="instructor"> Instructor <br>
-                    <input type="radio" name="type" value="admin"> Administration <br>
-                    <input type="radio" name="type" value="other"> Other <br>
+                <fieldset class="flex-layout horizontal ">
+                    <label> What Best Describes You? </label>
+                    <label class="option"><input type="radio" name="type" value="student"> Student</label> 
+                    <label class="option"><input type="radio" name="type" value="instructor"> Instructor</label> 
+                    <label class="option"><input type="radio" name="type" value="admin"> Administration</label> 
+                    <label class="option"><input type="radio" name="type" value="other"> Other</label> 
                 </fieldset>
-                <fieldset>
-                    <label> Comments </label><br>
+                <fieldset class="flex-layout horizontal ">
+                    <label> Comments </label>
                     <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
                 </fieldset>
                 <hr>

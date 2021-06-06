@@ -4,6 +4,7 @@
 @use 'layout';
 
 $border-color: #333;
+$error-color: colors.$error-color;
 $fieldset-margin: layout.$default-margin * 2;
 $body-padding: layout.$default-margin * 2;
 
@@ -15,8 +16,31 @@ form .body {
     padding: $body-padding;
 }
 
-form fieldset {
+fieldset {
     border: 0;
     padding: 0;
     margin: $fieldset-margin 0;
+}
+
+fieldset.required label::after {
+    content: "•";
+    font-size: 1.5em;
+    color: $error-color;
+    vertical-align: middle;
+}
+
+fieldset.error .errorText {
+    color: $error-color;
+}
+
+fieldset.error label {
+    color: $error-color;
+}
+
+label {
+    display: block;
+    margin-bottom: layout.$default-margin;
+    &:not(.option) {
+        font-family: semibold;
+    }
 }
