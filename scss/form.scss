@@ -5,8 +5,15 @@
 
 $border-color: #aaa;
 $error-color: colors.$error-color;
+$disabled-color: #999;
 $fieldset-margin: layout.$default-margin * 2;
 $body-padding: layout.$default-margin * 2;
+$form-font: light;
+// $form-font-size: 16px;
+
+form {
+    margin: (layout.$default-margin * 2) 0;
+}
 
 form .body {
     border-left: 1px solid $border-color;
@@ -43,4 +50,29 @@ label {
     &:not(.option) {
         font-family: semibold;
     }
+}
+
+// Input elements
+
+%input-element {
+    font-family: $form-font;
+    padding: layout.$default-margin;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+    &[disabled] {
+        background-color:$disabled-color;
+    }
+}
+
+select {
+    @extend %input-element;
+}
+
+textarea {
+    @extend %input-element;
+    border-radius: 5px 5px 0px 5px;
+}
+
+input {
+    @extend %input-element;
 }

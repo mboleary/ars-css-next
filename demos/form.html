@@ -32,12 +32,47 @@
     <div class="container">
         <h1 class="accent-2 hbar"> Form Demo </h1>
 
-        <!-- Page content goes here -->
+        <p>Here are some demonstration forms. These are heavily inspired by the old info form styling in the old version of this styling system. All of the inputs are rounded to make it more obvious that they can be interacted with. This newer theme helps to add more consistency across the entire website.</p>
 
         <form action="#" target="_blank" method="get">
             <div class="app-bar flex-layout vertical">
                 <div class="flex-layout horizontal center">
                     <h2> This is an Info Form </h2>
+                </div>
+            </div>
+            <div class="body">
+                <p> Give us some feedback! We'd love to hear from you! </p>
+                <!-- Note: Fieldset is meant for a PART of a form, not the whole
+                form -->
+                <fieldset class="flex-layout horizontal required">
+                    <label> Name </label>
+                    <input type="text" required>
+                </fieldset>
+                <fieldset class="flex-layout horizontal  required error">
+                    <label> Email </label>
+                    <input type="email" required>
+                    <p class="errorText"><small> Please Enter a Valid Email Address. </small></p>
+                </fieldset>
+                <fieldset class="flex-layout horizontal ">
+                    <label> What Best Describes You? </label>
+                    <label class="option"><input type="radio" name="type" value="student"> Student</label> 
+                    <label class="option"><input type="radio" name="type" value="instructor"> Instructor</label> 
+                    <label class="option"><input type="radio" name="type" value="admin"> Administration</label> 
+                    <label class="option"><input type="radio" name="type" value="other"> Other</label> 
+                </fieldset>
+                <fieldset class="flex-layout horizontal ">
+                    <label> Comments </label>
+                    <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
+                </fieldset>
+                <hr>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <form action="#" target="_blank" method="get">
+            <div class="app-bar bg-accent-2 flex-layout vertical">
+                <div class="flex-layout horizontal center">
+                    <h2 class="fg-dark-color"> This one has a lot of elements </h2>
                 </div>
             </div>
             <div class="body">

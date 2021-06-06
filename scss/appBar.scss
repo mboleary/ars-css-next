@@ -10,8 +10,11 @@ $bg-color: black;
 $fg-color: white;
 
 .app-bar {
-    background-color: $bg-color;
-    color: $fg-color;
+    // Allow the app bar to be colored by an accent color
+    &:not([class*="bg-accent"]) {
+        background-color: $bg-color;
+        color: $fg-color;
+    }
     height: $height;
     margin: 0;
     border: 0;
