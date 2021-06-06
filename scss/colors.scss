@@ -11,9 +11,12 @@ $error-color: #FF230F;
 $warn-color: #FFC30F;
 
 // These colors define the background and foreground colors
-// $background-color-dark: #002C3D;
 $background-color-dark: #111;
 $background-color-light: white;
+
+// Border colors
+$border-color-light: #aaa;
+$border-color-dark: #555;
 
 // Text Colors
 $text-color-dark: white;
@@ -160,7 +163,7 @@ body[dark] {
 // Gradients
 
 @function lingrad1($deg, $color) {
-    $c1: color.adjust($color, $lightness: -30%);
+    $c1: color.adjust($color, $lightness: -25%);
     $c2: $color;
     @return linear-gradient($deg, $c1 0%, $c2 100%);
 }
