@@ -52,6 +52,11 @@ label {
     }
 }
 
+legend {
+    font-family: bold;
+    text-align: center;
+}
+
 // Input elements
 
 %input-element {
@@ -71,6 +76,8 @@ select {
 textarea {
     @extend %input-element;
     border-radius: 5px 5px 0px 5px;
+    min-height: 16px;
+    resize: vertical;
 }
 
 input {
