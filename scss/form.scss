@@ -3,7 +3,6 @@
 @use 'colors';
 @use 'layout';
 
-$border-color: #aaa;
 $error-color: colors.$error-color;
 $disabled-color: #999;
 $input-bg-color: white;
@@ -17,11 +16,19 @@ form {
 }
 
 form .body {
-    border-left: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    border-right: 1px solid $border-color;
+    border-left: 1px solid colors.$border-color-light;
+    border-bottom: 1px solid colors.$border-color-light;
+    border-right: 1px solid colors.$border-color-light;
     border-top: 0px;
     padding: $body-padding;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            border-color: colors.$border-color-dark;
+        }
+    }
+    body[dark] & {
+        border-color: colors.$border-color-dark;
+    }
 }
 
 fieldset {
@@ -64,7 +71,15 @@ legend {
     font-family: $form-font;
     padding: layout.$default-margin;
     border-radius: 5px;
-    border: 1px solid $border-color;
+    border: 1px solid colors.$border-color-light;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            border-color: colors.$border-color-dark;
+        }
+    }
+    body[dark] & {
+        border-color: colors.$border-color-dark;
+    }
     &[disabled] {
         background-color:$disabled-color;
     }

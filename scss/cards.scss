@@ -10,10 +10,18 @@ $border-radius: 5px;
 // @TODO consider splitting this out into several cards
 .content-card {
     border-radius: $border-radius;
-    border: 1px solid map.get(colors.$grays, 3);
+    border: 1px solid colors.$border-color-light;
     padding: (layout.$default-margin * 2);
     min-width: layout.$min-width;
     margin: layout.$default-margin (layout.$default-margin*2) layout.$default-margin 0;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            border-color: colors.$border-color-dark;
+        }
+    }
+    body[dark] & {
+        border-color: colors.$border-color-dark;
+    }
     &.set-width {
         width: layout.$default-width;
     }
@@ -44,7 +52,7 @@ $border-radius: 5px;
         border-bottom-left-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
     }
-    .round-lef-corners {
+    .round-left-corners {
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
     }
