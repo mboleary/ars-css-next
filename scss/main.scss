@@ -62,6 +62,19 @@ button, input[type="button"] {
     border: 1px solid currentColor;
     color: currentColor;
     background-color: transparent;
+    &:hover {
+        border-color: transparent;
+        color: colors.$background-color-light;
+        background-color: colors.$text-color-light;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: colors.$background-color-dark;
+            background-color: colors.$text-color-dark;
+        }
+        body[dark] & {
+            color: colors.$background-color-dark;
+            background-color: colors.$text-color-dark;
+        }
+    }
     @each $index, $color in colors.$accent-colors {
         .accent-#{$index} {
             border-color: $color;

@@ -4,7 +4,7 @@
 @use 'sass:color';
 // This theme makes use of n-many accent colors, but will likely make use of the lowest indexed elements more often
 $accent-colors: (1:#BBE524, 2:#2682A6, 3:#FF230F, 4:#FB9902);
-$dark-color: #F0F7D4;
+$dark-color: #002C3D;
 
 // Error and Warning
 $error-color: #FF230F;
@@ -79,6 +79,10 @@ $grays: (
     @include text-color($text-color-light);
 }
 
+.fg-color {
+    @include text-color($text-color-light);
+}
+
 body {
     @include bg-color($background-color-light);
     @include text-color($text-color-light);
@@ -105,6 +109,10 @@ hr {
         @include text-color($text-color-dark);
     }
 
+    .fg-color {
+        @include text-color($text-color-dark);
+    }
+
     .backdrop-small {
         @include backdrop-small($background-color-dark);
     }
@@ -112,6 +120,8 @@ hr {
     hr {
         border-color: $text-color-dark;
     }
+
+    
 }
 
 body[dark] {
@@ -119,6 +129,9 @@ body[dark] {
     @include text-color($text-color-dark);
     .bg-color {
         @include bg-color($background-color-dark);
+        @include text-color($text-color-dark);
+    }
+    .fg-color {
         @include text-color($text-color-dark);
     }
     .backdrop-small {

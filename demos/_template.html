@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner">
+            <div class="container text-center">
+                <h1 >Test page</h1>
+                <hr>
+                <p>Ars CSS NEXT</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="accent-1 hbar"> Ars-Materia Demos </h1>
+            
+            <!-- Page content goes here -->
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
