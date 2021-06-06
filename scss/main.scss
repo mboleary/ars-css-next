@@ -8,6 +8,7 @@
 @use 'banner';
 @use 'cards';
 @use 'textSection';
+@use 'appBar';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;
