@@ -37,30 +37,30 @@
             with. This newer theme helps to add more consistency across the entire website.</p>
 
         <form action="#" target="_blank" method="get">
-            <div class="app-bar flex-layout vertical">
-                <div class="flex-layout horizontal center">
+            <div class="app-bar flex-layout horizontal">
+                <div class="flex-layout vertical center">
                     <h2> This is an Info Form </h2>
                 </div>
             </div>
             <div class="body">
                 <p> Give us some feedback! We'd love to hear from you! </p>
-                <fieldset class="flex-layout horizontal required">
+                <fieldset class="flex-layout vertical required">
                     <label> Name </label>
                     <input type="text" required>
                 </fieldset>
-                <fieldset class="flex-layout horizontal  required error">
+                <fieldset class="flex-layout vertical  required error">
                     <label> Email </label>
                     <input type="email" required>
                     <p class="errorText"><small> Please Enter a Valid Email Address. </small></p>
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> What Best Describes You? </label>
                     <label class="option"><input type="radio" name="type" value="student"> Student</label>
                     <label class="option"><input type="radio" name="type" value="instructor"> Instructor</label>
                     <label class="option"><input type="radio" name="type" value="admin"> Administration</label>
                     <label class="option"><input type="radio" name="type" value="other"> Other</label>
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Comments </label>
                     <textarea name="comments" rows="10" cols="40"> This is a test. </textarea>
                 </fieldset>
@@ -70,14 +70,14 @@
         </form>
 
         <form action="#" target="_blank" method="get">
-            <div class="app-bar bg-accent-4 flex-layout vertical">
-                <div class="flex-layout horizontal center">
+            <div class="app-bar bg-accent-4 flex-layout horizontal">
+                <div class="flex-layout vertical center">
                     <h2 class="fg-dark-color"> I'm an image input </h2>
                 </div>
             </div>
             <div class="body">
                 <p> This form has an image input on it. Clicking on it will cause the form to submit. </p>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Image </label>
                     <input type="image" src="static/img1.jpg" alt="Image input">
                     <p><small>Clicking on this will cause the form to submit</small></p>
@@ -86,14 +86,14 @@
         </form>
 
         <form action="#" target="_blank" method="get">
-            <div class="app-bar flex-layout vertical">
-                <div class="flex-layout horizontal center">
+            <div class="app-bar flex-layout horizontal">
+                <div class="flex-layout vertical center">
                     <h2 class="accent-1"> I'm a search input </h2>
                 </div>
             </div>
             <div class="body">
                 <p> This form has a search input on it. Clicking on it will cause the form to submit. </p>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Search </label>
                     <input type="search" name="q">
                     <p><small>Hitting <kbd>Enter</kbd> will cause this form to submit</small></p>
@@ -102,19 +102,19 @@
         </form>
 
         <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-            <div class="app-bar flex-layout vertical">
-                <div class="flex-layout horizontal center">
+            <div class="app-bar flex-layout horizontal">
+                <div class="flex-layout vertical center">
                     <h2 class="accent-2"> I auto-calculate values </h2>
                 </div>
             </div>
             <div class="body">
                 <p> This form has an output element that auto-updates when an input is changed (input event fires) </p>
                 <p><i>Note that the range inputs don't currently have support for labels. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range</a> for details.</i></p>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Input A </label>
                     <input type="range" name="a" value="50" min="0" max="100" step="any">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Input B </label>
                     <input type="range" name="b" value="50" min="0" max="100" step="any">
                 </fieldset>
@@ -126,14 +126,14 @@
         </form>
 
         <form action="#" target="_blank" method="get">
-            <div class="app-bar bg-accent-2 flex-layout vertical">
-                <div class="flex-layout horizontal center">
+            <div class="app-bar bg-accent-2 flex-layout horizontal">
+                <div class="flex-layout vertical center">
                     <h2 class="fg-dark-color"> This one has a lot of elements </h2>
                 </div>
             </div>
             <div class="body">
                 <p> This form has the rest of the elements in it </p>
-                <fieldset class="flex-layout horizontal">
+                <fieldset class="flex-layout vertical">
                     <legend>Test</legend>
                     <label> Car </label>
                     <select name="cars">
@@ -143,7 +143,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </fieldset>
-                <fieldset class="flex-layout horizontal">
+                <fieldset class="flex-layout vertical">
                     <label> Cars (select multiple) </label>
                     <select name="cars2" size="3" multiple>
                         <option value="volvo">Volvo</option>
@@ -152,7 +152,7 @@
                         <option value="audi">Audi</option>
                     </select>
                 </fieldset>
-                <fieldset class="flex-layout horizontal">
+                <fieldset class="flex-layout vertical">
                     <label> Cars (Option Groups) </label>
                     <select name="cars2" size="3" multiple>
                         <optgroup label="Swedish Cars">
@@ -165,63 +165,63 @@
                         </optgroup>
                     </select>
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Number</label>
                     <input type="number" name="num">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>Password</label>
                     <input type="password" name="pass">
                     <p><small>Never put passwords in strage web forms!</small></p>
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> What Best Describes You? </label>
                     <label class="option"><input type="checkbox" name="checkdemo" value="student"> Student</label>
                     <label class="option"><input type="checkbox" name="checkdemo" value="instructor"> Instructor</label>
                     <label class="option"><input type="checkbox" name="checkdemo" value="admin"> Administration</label>
                     <label class="option"><input type="checkbox" name="checkdemo" value="other"> Other</label>
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Date </label>
                     <input type="date" name="bday">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Date and Time </label>
                     <input type="datetime-local" name="bdaytime">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Time </label>
                     <input type="time" name="time">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Month and Year </label>
                     <input type="month" name="bdaytime">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> Week </label>
                     <input type="week" name="week_year">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label> File </label>
                     <input type="file" name="myFile">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>Range</label>
                     <input type="range" name="points" min="0" max="10">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>Telephone</label>
                     <input type="tel" name="usrtel">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>URL</label>
                     <input type="url" name="homepage">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>Color</label>
                     <input type="color" name="color" value="#ff0000">
                 </fieldset>
-                <fieldset class="flex-layout horizontal ">
+                <fieldset class="flex-layout vertical ">
                     <label>Input list</label>
                     <input list="browsers">
                     <datalist id="browsers">

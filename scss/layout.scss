@@ -62,13 +62,13 @@ $default-width: 240px;
 // Flex classes
 .flex-layout {
     display: flex;
-    &.horizontal {
+    &.vertical {
         flex-direction: column;
         .reverse {
             flex-direction: column-reverse;
         }
     }
-    &.vertical {
+    &.horizontal {
         flex-direction: row;
         .reverse {
             flex-direction: row-reverse;
