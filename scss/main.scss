@@ -12,6 +12,7 @@
 @use 'form';
 @use 'table';
 @use 'chips';
+@use "dialogs";
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;

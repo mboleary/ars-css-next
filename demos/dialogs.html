@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+        <script type="module">
+            const dlg1 = document.querySelector('#image-dlg');
+            const dlg2 = document.querySelector('#test-dlg');
+            const backdrop = document.querySelector('div.backdrop');
+
+            console.log("Backdrop:", backdrop)
+            
+            // Opens and closes Dialogs
+            function openDlg1() {
+                backdrop.setAttribute("open", "");
+                document.body.style.overflow = "hidden";
+                dlg1.show();
+            }
+            function closeDlg1() {
+                backdrop.removeAttribute("open");
+                document.body.style.overflow = null;
+                dlg1.close();
+            }
+
+            function openDlg2() {
+                backdrop.setAttribute("open", "");
+                document.body.style.overflow = "hidden";
+                dlg2.show();
+            }
+            function closeDlg2() {
+                backdrop.removeAttribute("open");
+                document.body.style.overflow = null;
+                dlg2.close();
+            }
+
+            window.openDlg1 = openDlg1;
+            window.closeDlg1 = closeDlg1;
+
+            window.openDlg2 = openDlg2;
+            window.closeDlg2 = closeDlg2;
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner bg-gradient-a1 fg-dark-color">
+            <div class="container text-center">
+                <h1 >Dialog test page</h1>
+                <hr>
+                <p>Ars CSS NEXT</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="accent-1 hbar"> Dialog Demo </h1>
+
+            <button onclick="openDlg1()">Open Dialog 1</button>
+            <button onclick="openDlg2()">Open Dialog 2</button>
+            
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+            <p>Test</p>
+
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+
+        <!-- Dialogs go here -->
+        <div class="backdrop flex-layout horizontal center bg-blur">
+            <dialog id="image-dlg" class="dialog noPadding">
+                <form class="no-margin flex-layout horizontal">
+                    <div class="app-bar flex-layout vertical">
+                        <h1 class="flex">Edit Image</h1>
+                        <span onclick="closeDlg1()">X</span>
+                    </div>
+                    <div class="body">
+                        <p flavor-text>Edit the image information</p>
+                        <div form-elements></div>
+                        <hr>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </dialog>
+
+            <dialog id="test-dlg" class="dialog">
+                <div class="flex-layout vertical">
+                    <h1 class="flex"> Hello World </h1>
+                    <span  onclick="closeDlg2()">X</span>
+                </div>
+                <p> This is a test for dialogs </p>
+            </dialog>
+        </div>
+    </body>
+</html>

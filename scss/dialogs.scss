@@ -1,0 +1,29 @@
+// Dialogs and Backdrops
+
+$backdrop-color: #00000088;
+
+// Backdrops
+
+.backdrop[open] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $backdrop-color;
+    width: 100vw;
+    height: 100vh;
+}
+
+.backdrop:not([open]) {
+    display: none;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+// Dialogs
+
+.dialog {
+    border: 2px solid black;
+    padding: 0;
+}
