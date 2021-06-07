@@ -160,6 +160,14 @@ body[dark] {
     }
 }
 
+.bg-light-color {
+    background-color: $background-color-light;
+}
+
+.bg-dark-color {
+    background-color: $background-color-dark;
+}
+
 // Gradients
 
 @function lingrad1($deg, $color) {

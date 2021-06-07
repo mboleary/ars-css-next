@@ -1,0 +1,105 @@
+// Styling for Chips
+
+@use 'sass:math';
+
+@use 'colors';
+@use 'layout';
+
+$sm-height: 16px;
+$md-height: 32px;
+$lg-height: 56px;
+
+
+$bg-color-dark: colors.$border-color-dark;
+$bg-color-light: colors.$border-color-light;
+$fg-color: black;
+
+%border-color {
+    border-color: colors.$border-color-light;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            border-color: colors.$border-color-dark;
+        }
+    }
+
+    body[dark] & {
+        border-color: colors.$border-color-dark;
+    }
+}
+
+%bg-color {
+    background-color: $bg-color-light;
+    @media only screen and (prefers-color-scheme: dark) {
+        & {
+            background-color: $bg-color-dark;
+        }
+    }
+
+    body[dark] & {
+        background-color: $bg-color-dark;
+    }
+}
+
+%chip {
+    font-family: semibold;
+    display: inline-block;
+    padding: layout.$default-margin;
+    margin: layout.$default-margin;
+    
+}
+
+%solid-fill {
+    &:not([class*="bg-accent"]) {
+        // background-color: $bg-color;
+        @extend %bg-color;
+    }
+}
+
+%outline {
+    border: 2px solid $fg-color;
+    &:not([class*="accent"]) {
+        @extend %border-color;
+    }
+    &[class*="accent"] {
+        border-color: currentColor;
+    }
+}
+
+.chip-sm {
+    @extend %chip;
+    border-radius: $sm-height;
+    height: $sm-height;
+    &:not(.outline) {
+        @extend %solid-fill;
+    }
+    &.outline {
+        @extend %outline;
+    }
+}
+
+.chip-md {
+    @extend %chip;
+    border-radius: $md-height;
+    height: $md-height;
+    line-height: $md-height;
+    &:not(.outline) {
+        @extend %solid-fill;
+    }
+    &.outline {
+        @extend %outline;
+    }
+}
+
+.chip-lg {
+    @extend %chip;
+    border-radius: $lg-height;
+    height: $lg-height;
+    line-height: $lg-height;
+    padding: (layout.$default-margin * 2);
+    &:not(.outline) {
+        @extend %solid-fill;
+    }
+    &.outline {
+        @extend %outline;
+    }
+}

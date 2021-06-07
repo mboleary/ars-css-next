@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner bg-gradient-a4">
+            <div class="container fg-dark-color text-center">
+                <h1>Chips and Tags</h1>
+                <hr>
+                <p>Ars CSS NEXT</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="accent-4 hbar"> Chips and Tags </h1>
+
+            <p>Chips have a variety of uses. In the old Stylesheets, I used them for displaying tags on my website, but they can be used to show other list-form data as well.</p>
+            
+            <div class="chip-sm">Tag</div><div class="chip-sm">Test</div><div class="chip-sm">Tag</div><div class="chip-sm">Test</div>
+
+            <p>There is also a medium and large variant</p>
+
+            <div class="chip-sm bg-accent-1 fg-light-color">Small Tag</div>
+
+            <div class="chip-md bg-accent-1 fg-light-color">Medium Tag</div>
+
+            <div class="chip-lg bg-accent-1 fg-light-color">Large Tag</div>
+
+            <p>They can also be easily styled</p>
+
+            <div class="chip-sm bg-accent-1 fg-light-color">Tag</div><div class="chip-sm bg-accent-2 fg-dark-color">Test</div><div class="chip-sm bg-gradient-a3 fg-light-color">Tag</div><div class="chip-sm accent-4">Test</div>
+
+            <div class="chip-sm accent-1 bg-dark-color">Accent 1</div><div class="chip-sm accent-2 bg-dark-color">Accent 2</div><div class="chip-sm accent-3 bg-dark-color">Accent 3</div><div class="chip-sm accent-4 bg-dark-color">Accent 4</div>
+
+            <p>There's an outlined style</p>
+
+            <div class="chip-sm outline">Tag</div><div class="chip-sm outline accent-1">Tag</div><div class="chip-sm outline accent-2">Test</div><div class="chip-sm outline accent-3">Tag</div><div class="chip-sm outline accent-4">Test</div>
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
