@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+        <script>
+            let elem = null;
+            const imgs = [
+                "bg1.jpg",
+                "bg2.jpg",
+                "bg3.jpg",
+                "bg4.jpg",
+                "bg5.jpg",
+                "bg6.jpg",
+                "bg7.jpg",
+                "bg8.jpg",
+                "bg9.jpg",
+            ];
+            let curr = 0;
+            function updateImage(num) {
+                let style = `url(./static/${imgs[num]});`;
+                console.log("Updated image to:", num, imgs[num], elem, style);
+                // elem.style.backgroundImage = `url('./static/${imgs[num]}');`;
+                // elem.style.backgroundImage = style;
+                elem.setAttribute("style", `background-image:${style}`);
+                // elem.style.setProperty("background-image", style);
+                // elem.style.backgroundColor = num % 2 ? "blue" : "red";
+            }
+            function onload() {
+                elem = document.querySelector("#display-img");
+                updateImage(0);
+                const interval = setInterval(() => {
+                    curr = (curr + 1) % imgs.length;
+                    updateImage(curr);
+                }, 5000);
+            }
+            function imgTest() {
+                curr = (curr + 1) % imgs.length;
+                updateImage(curr);
+            }
+            window.addEventListener("load", onload);
+        </script>
+        <style>
+            .fade-ani {
+                transition: background 1s;
+            }
+        </style>
+    </head>
+    <body dark >
+        <!-- style="background-image:url('./static/bg5.jpg');" -->
+        <div id="display-img" class="bg-img fade-ani" >
+            <div class="banner ">
+                <div class="container full-width">
+                    <div class="content-card no-border bg-darken bg-blur fg-dark-color text-shadow-dark">
+                        <div class="flex-layout horizontal ">
+                            <div class="flex">
+                                <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span></h1>
+                                <p>Art of the (Computer) Machine</p>
+                            </div>
+                            <pre>&nbsp;______________________________<br>&lt;&nbsp;I&nbsp;mount&nbsp;my&nbsp;soul&nbsp;at&nbsp;/dev/null&nbsp;&gt;<br>&nbsp;------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;^__^<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;(oo)\_______<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(__)\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)\/\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||----w&nbsp;|<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||</pre>
+                        </div>
+                        <hr>
+                        <div>
+                            <a href="#">Test</a>
+                            <button onclick="imgTest()">Next Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="accent-2 hbar text-shadow-dark"> Ars-Materia Demos </h1>
+            </div>
+            <div class="grid-layout">
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-darken bg-blur fg-dark-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+                <div class="content-card  no-border bg-lighten bg-blur fg-light-color">
+                    <h3>Card Title</h3>
+                    <p> This is another card</p>
+                    <p><b>It still doesn't have a picture</b></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="height-20"></div>
+        
+        <div class="container">
+            
+            <!-- Page content goes here -->
+
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>

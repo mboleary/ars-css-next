@@ -25,7 +25,11 @@ $text-color-light: black;
 // UI Colors
 $highlight-color: #FFFF00;
 $hr-color: #999;
-$shadow-color: #aaa;
+
+
+$shadow-color: #aaa; //depricated
+$shadow-color-light: #aaa;
+$shadow-color-dark: #333;
 
 // Calculated colors to use for the application
 $link-color-normal: color.adjust(map.get($accent-colors, 1), $lightness: -20%);
@@ -204,4 +208,46 @@ body[dark] {
     } @else {
         @return black;
     }
+}
+
+// Shadows
+
+.box-shadow {
+    box-shadow: 0 1px 5px $shadow-color-light;
+
+    @media only screen and (prefers-color-scheme: dark) {
+        box-shadow: 0 1px 5px $shadow-color-dark;
+    }
+
+    body[dark] &  {
+        box-shadow: 0 1px 5px $shadow-color-dark;
+    }
+}
+
+.box-shadow-dark {
+    box-shadow: 0 1px 5px $shadow-color-dark;
+}
+
+.box-shadow-light {
+    box-shadow: 0 1px 5px $shadow-color-light;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 5px $shadow-color-light;
+
+    @media only screen and (prefers-color-scheme: dark) {
+        text-shadow: 0 1px 5px $shadow-color-dark;
+    }
+
+    body[dark] &  {
+        text-shadow: 0 1px 5px $shadow-color-dark;
+    }
+}
+
+.text-shadow-dark {
+    text-shadow: 0 1px 5px $shadow-color-dark;
+}
+
+.text-shadow-light {
+    text-shadow: 0 1px 5px $shadow-color-light;
 }

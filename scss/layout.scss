@@ -17,6 +17,30 @@ $breakpoints: (
 $min-width: 240px;
 $default-width: 240px;
 
+// Breakpoints for grid columns
+$grid-breakpoints: (
+    0: (
+        "size": 320px,
+        "col": 1
+    ),
+    1: (
+        "size": 640px,
+        "col": 2
+    ),
+    2: (
+        "size": 1024px,
+        "col": 3
+    ),
+    3: (
+        "size": 1280px,
+        "col": 4
+    ),
+    4: (
+        "size": 1920px,
+        "col": 6
+    )
+);
+
 // Mixins
 
 @mixin container($width: $content-width, $margin: auto) {
@@ -53,6 +77,14 @@ $default-width: 240px;
 
 .full-width {
     width: 100%;
+}
+
+.full-vh {
+    height: 100vh;
+}
+
+.full-vw {
+    width: 100vw;
 }
 
 .text-center {
@@ -131,3 +163,42 @@ img.cover {
 img.contain {
     object-fit: contain;
 }
+
+// Grid layout classes
+
+.grid-layout {
+    display: grid;
+    grid-auto-rows: auto;
+    margin: 0 ($default-margin * 2);
+    // grid-template-columns: repeat(auto-fill, $default-width);
+
+    @each $index, $obj in $grid-breakpoints {
+        $size: map.get($obj, "size");
+        $col: map.get($obj, "col");
+        @if $index == 0 {
+            @media only screen and (max-width: $size) {
+                & {
+                    grid-template-columns: repeat($col, 1fr);
+                }
+            }
+        }
+        @else {
+            $prev-size: map.get(map.get($grid-breakpoints, $index - 1), "size");
+            @media only screen and (max-width: $size) and (min-width: ($prev-size + 1)) {
+                & {
+                    grid-template-columns: repeat($col, 1fr);
+                }
+            }
+        }
+    }
+
+    $last-breakpoint: map.get($grid-breakpoints, length(map.values($grid-breakpoints)) - 1);
+    $last-size: map.get($last-breakpoint, "size");
+    $last-col: map.get($last-breakpoint, "col");
+    @media only screen and (min-width: $last-size) {
+        & {
+            grid-template-columns: repeat($last-col, 1fr);
+        }
+    }
+}
+
