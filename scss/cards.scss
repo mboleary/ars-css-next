@@ -25,6 +25,9 @@ $border-radius: 5px;
     &.set-width {
         width: layout.$default-width;
     }
+    &.set-min-width {
+        min-width: layout.$default-width;
+    }
     &.no-border {
         border: 0;
     }

@@ -116,6 +116,18 @@ $grid-breakpoints: (
     text-align: center;
 }
 
+.margin {
+    margin: 0 $default-margin;
+}
+
+.margin-2x {
+    margin: 0 ($default-margin * 2);
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
 // Flex classes
 .flex-layout {
     display: flex;
