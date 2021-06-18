@@ -20,19 +20,19 @@ $default-width: 240px;
 // Breakpoints for grid columns
 $grid-breakpoints: (
     0: (
-        "size": 320px,
+        "size": 640px,
         "col": 1
     ),
     1: (
-        "size": 640px,
+        "size": 1024px,
         "col": 2
     ),
     2: (
-        "size": 1024px,
+        "size": 1280px,
         "col": 3
     ),
     3: (
-        "size": 1280px,
+        "size": 1650px,
         "col": 4
     ),
     4: (
@@ -47,6 +47,31 @@ $grid-breakpoints: (
     margin: 0% $margin;
     overflow: auto;
     max-width: $width;
+}
+
+@mixin colspan($cols: 1) {
+    grid-column: span $cols;
+    @each $index, $obj in $grid-breakpoints {
+        $size: map.get($obj, "size");
+        $col: map.get($obj, "col");
+        @if $cols >= $col {
+            @if $index == 0 {
+                @media only screen and (max-width: $size) {
+                    & {
+                        grid-column: span $col;
+                    }
+                }
+            }
+            @else {
+                $prev-size: map.get(map.get($grid-breakpoints, $index - 1), "size");
+                @media only screen and (max-width: $size) and (min-width: ($prev-size + 1)) {
+                    & {
+                        grid-column: span $col;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Container Classes
@@ -170,6 +195,7 @@ img.contain {
     display: grid;
     grid-auto-rows: auto;
     margin: 0 ($default-margin * 2);
+    align-items: stretch;
     // grid-template-columns: repeat(auto-fill, $default-width);
 
     @each $index, $obj in $grid-breakpoints {
@@ -202,3 +228,18 @@ img.contain {
     }
 }
 
+.grid-colspan-2 {
+    @include colspan(2);
+}
+
+.grid-colspan-3 {
+    @include colspan(3);
+}
+
+.grid-rowspan-2 {
+    grid-row: span 2;
+}
+
+.grid-rowspan-3 {
+    grid-row: span 3;
+}
