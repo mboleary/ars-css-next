@@ -208,6 +208,7 @@ img.contain {
     grid-auto-rows: auto;
     margin: 0 ($default-margin * 2);
     align-items: stretch;
+    grid-auto-flow: row dense;
     // grid-template-columns: repeat(auto-fill, $default-width);
 
     @each $index, $obj in $grid-breakpoints {

@@ -51,3 +51,13 @@ $subtitle-font-size: 1.5em;
         @extend %banner-fonts;
     }
 }
+
+.banner-footer {
+    font-size: unset;
+    min-height: 32px;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
