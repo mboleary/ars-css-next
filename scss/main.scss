@@ -93,6 +93,10 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
     }
 }
 
+// Link Button
+
+
+
 // Special Backgrounds
 
 .bg-blur {
@@ -100,11 +104,11 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
 }
 
 .bg-darken {
-    background-color: #00000055;
+    background-color: #00000077;
 }
 
 .bg-lighten {
-    background-color: #FFFFFF55;
+    background-color: #FFFFFF77;
 }
 
 .bg-img {
@@ -113,4 +117,3 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
     background-size: cover;
     background-position: center;
 }
-

@@ -18,68 +18,12 @@
                 }
             }
         </script>
-        <script>
-            let elem = null;
-            let stepperElem = null;
-            let interval = null;
-            const imgs = [
-                "bg1.jpg",
-                "bg2.jpg",
-                "bg3.jpg",
-                "bg4.jpg",
-                "bg5.jpg",
-                "bg6.jpg",
-                "bg7.jpg",
-                "bg8.jpg",
-                "bg9.jpg",
-            ];
-            let curr = 0;
-            function updateImage(num) {
-                let style = `url(./static/${imgs[num]});`;
-                console.log("Updated image to:", num, imgs[num], elem, style);
-                // elem.style.backgroundImage = `url('./static/${imgs[num]}');`;
-                // elem.style.backgroundImage = style;
-                // elem.style.setProperty("background-image", style);
-                // elem.style.backgroundColor = num % 2 ? "blue" : "red";
-                elem.setAttribute("style", `background-image:${style}`);
-                stepperElem.innerText = `${num + 1}/${imgs.length}`;
-            }
-            function setupInterval() {
-                interval = setInterval(() => {
-                    curr = (curr + 1) % imgs.length;
-                    updateImage(curr);
-                }, 5000);
-            }
-            function onload() {
-                elem = document.querySelector("#display-img");
-                stepperElem = document.querySelector("#img-stepper");
-                updateImage(0);
-                setupInterval();
-            }
-            function incImg(num = 1) {
-                clearInterval(interval);
-                if (curr + num > 0) {
-                    curr = (curr + num) % imgs.length;
-                } else {
-                    curr = ((curr + num) + imgs.length) % imgs.length;
-                }
-                updateImage(curr);
-                setupInterval();
-            }
-            window.addEventListener("load", onload);
-        </script>
-        <style>
-            .fade-ani {
-                transition: background 1s;
-            }
-        </style>
     </head>
     <body dark >
-        <!-- style="background-image:url('./static/bg5.jpg');" -->
         <div id="display-img" class="bg-img fade-ani" >
             <div class="banner">
                 <div class="container full-width">
-                    <div class="content-card no-border bg-darken bg-blur fg-dark-color text-shadow-dark">
+                    <div class="">
                         <div class="flex-layout horizontal ">
                             <div class="flex">
                                 <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span></h1>
@@ -90,57 +34,48 @@
                         <hr>
                         <div>
                             <a href="#">Test</a>
-                            <button onclick="incImg()">Next Image</button>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="banner-footer flex-layout horizontal bg-darken bg-blur fg-dark-color">
-                    <div class="flex"></div>
-                    <div>
-                        <button onclick="incImg(-1)">Prev</button>
-                        <span id="img-stepper">-/-</span>
-                        <button onclick="incImg(1)">Next</button>
-                    </div>
-                    <div class="flex"></div>
-                </div>
             </div>
             <div class="title-banner">
-                <div class="container fg-dark-color">
-                    <h1 class="hbar text-shadow-dark"> Recent Activity </h1>
+                <div class="container">
+                    <h1> Recent Activity </h1>
                 </div>
             </div>
             <div class="grid-layout grid-gap">
-                <div class="content-card text-shadow-dark no-border no-margin bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin">
                     <h3 class="accent-1">Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card grid-colspan-2 no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin grid-colspan-2 ">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin">
                     <h3 class="accent-4">Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card grid-rowspan-2 no-border no-margin bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin grid-rowspan-2 ">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card set-min-width grid-rowspan-3 grid-colspan-2 no-border no-margin no-padding bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin set-min-width grid-rowspan-3 grid-colspan-2 no-padding">
                     <img class="full-width round-top-corners" src="./static/img3.png">
                     <div class="margin-2x">
                         <h3>Image Title</h3>
@@ -148,27 +83,27 @@
                         <p><b>It has a picture of Patrick</b></p>
                     </div>
                 </div>
-                <div class="content-card  no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card grid-colspan-3 no-border no-margin bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin grid-colspan-3 ">
                     <h3 class="accent-3">Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin">
                     <h3 class="accent-2">Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-darken bg-blur fg-dark-color">
+                <div class="content-card no-margin  ">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>
                 </div>
-                <div class="content-card  no-border no-margin bg-lighten bg-blur fg-light-color">
+                <div class="content-card no-margin">
                     <h3>Card Title</h3>
                     <p> This is another card</p>
                     <p><b>It still doesn't have a picture</b></p>

@@ -256,3 +256,7 @@ img.contain {
 .grid-rowspan-3 {
     grid-row: span 3;
 }
+
+.grid-gap {
+    gap: ($default-margin*2);
+}
