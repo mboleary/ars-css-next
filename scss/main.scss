@@ -14,6 +14,9 @@
 @use 'chips';
 @use "dialogs";
 
+// Project-specific components
+@use './website/header.scss';
+
 .vbar {
     border-left: layout.$default-margin solid currentColor;
     padding-left: layout.$default-margin;

@@ -1,2 +1,64 @@
 // Contains the styling for the header of the website, as well as the landing page
 
+@use 'sass:color';
+@use 'sass:map';
+
+@use '../colors';
+@use "../layout";
+
+$menu-fg-color: white;
+$menu-bg-color: colors.$dark-color;
+
+$item-selected-bg-color: color.adjust($menu-bg-color, $lightness: 10%);
+$item-selected-border-color: map.get(colors.$accent-colors, 1);
+
+$item-hover-bg-color: color.adjust($menu-bg-color, $lightness: 20%);
+$item-hover-border-color: color.adjust(map.get(colors.$accent-colors, 1), $lightness: 20%);
+
+
+// Menu Bar
+
+/*
+    There are 2 variations:
+    - The default, where the background color is opaque
+    - (.no-bg-color) Blurred, so that it looks neat on top of other content
+*/
+
+.menu-bar {
+    font-size: 20px;
+    &:not(.no-bg-color) {
+        background-color: $menu-bg-color;
+    }
+}
+
+ul.menu-bar {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu-bar .menu-item {
+    display: block;
+    // Element that will be visible
+    & :first-child {
+        padding: layout.$default-margin*2 layout.$default-margin*2 layout.$default-margin layout.$default-margin*2;
+        display: block;
+        // height: 100%;
+        // width: 100%;
+        &:link, &:visited {
+            color: $menu-fg-color;
+        }
+    }
+    &.selected {
+        border-bottom: layout.$default-margin solid $item-selected-border-color;
+        background-color: $item-selected-bg-color;
+    }
+    &:hover {
+        border-bottom: layout.$default-margin solid $item-hover-border-color;
+        background-color: $item-hover-bg-color;
+    }
+    &:not(.selected):not(:hover) {
+        padding-bottom: layout.$default-margin;
+    }
+}
