@@ -1,0 +1,79 @@
+// Contains styling for the website footer
+
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:list';
+
+@use '../colors';
+@use "../layout";
+
+// Footer classes
+
+$footer-top-bg-color: color.adjust(colors.$dark-color, $lightness: -5%);
+$footer-top-fg-color: white;
+
+$footer-bottom-bg-color: colors.$dark-color;
+$footer-bottom-fg-color: white;
+
+.footer {
+    & .footer-top {
+        background-color: $footer-top-bg-color;
+        padding: layout.$default-margin 0;
+
+        & .link-list {
+            text-align: center;
+            // All immediate children of this element will be links
+            & > * {
+                font-family: semibold;
+                display: block;
+                margin: 0 0 2px 0;
+                & a:link, & a:visited, & {
+                    // Make links display correctly
+                    color: white;
+                    display: block;
+                }
+
+                // Add inversion effect
+                & a:hover, &:hover {
+                    color: $footer-top-bg-color;
+                    background-color: $footer-top-fg-color;
+                }
+            }
+            // Color the titles for each section
+            $len: list.length(colors.$accent-colors);
+            @each $index, $color in colors.$accent-colors {
+                &:nth-child(#{$len}n+#{$index}) > .title {
+                    & a:link, & a:visited, & {
+                        color: $color;
+                    }
+                    & a:hover, &:hover {
+                        background-color: $color;
+                        color: $footer-top-bg-color;
+                    }
+                }
+            }
+            & > *.title {
+                font-family: bold;
+                margin-bottom: layout.$default-margin;
+            }
+        }
+        & ul.link-list {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            
+        }
+    }
+    & .footer-bottom {
+        background-color: $footer-bottom-bg-color;
+    }
+}
+
+// .footer .footer-top .link-list {
+//     // All immediate children of this element will be links
+//     & > * {
+//         & a:link, & a:visited, & {
+//             color: white;
+//         }
+//     }
+// }

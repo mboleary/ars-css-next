@@ -16,6 +16,7 @@
 
 // Project-specific components
 @use './website/header.scss';
+@use './website/footer.scss';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;
@@ -95,10 +96,6 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
         }
     }
 }
-
-// Link Button
-
-
 
 // Special Backgrounds
 
