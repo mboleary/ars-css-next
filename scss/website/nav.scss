@@ -11,9 +11,6 @@ $navbar-bg-color: #222;
 $navbar-fg-color: #808080;
 $navbar-fg-title-color: white;
 
-$toc-fg-color: $navbar-fg-title-color;
-$toc-bg-color: $navbar-fg-color;
-
 // Navigation Bar
 .navbar {
     transition: height 1s;
@@ -28,14 +25,13 @@ $toc-bg-color: $navbar-fg-color;
             overflow: hidden;
             white-space: nowrap;
         }
-        & .title, & .action {
+        & .title, & .action:hover {
             color: $navbar-fg-title-color;
         }
     }
     // Expanded Table of Contents
     & .toc {
-        color: $toc-fg-color;
-        & .title, & .action {
+        & .title, & .action:hover {
             color: $navbar-fg-title-color;
         }
     }
