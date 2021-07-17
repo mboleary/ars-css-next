@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>Testing Ars CSS NEXT styling</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+        function toggleDark() {
+            const elem = document.body;
+            let state = elem.getAttribute("dark");
+            if (state === null) {
+                elem.setAttribute("dark", "");
+            } else {
+                elem.removeAttribute("dark");
+            }
+        }
+    </script>
+</head>
+
+<body dark>
+    <header>
+        <div class="container flex-layout horizontal wrap">
+            <h1><span class="accent-1">Ars</span><span class="accent-2">Machina</span>.net</h1>
+        </div>
+        <div class="menu-bar">
+            <div class="container">
+                <ul class="flex menu-bar flex-layout horizontal wrap">
+                    <li class="flex menu-item selected">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="flex menu-item"><a href="#">Blog</a></li>
+                    <li class="flex menu-item"><a href="#">Projects</a></li>
+                    <li class="flex menu-item"><a href="#">Music</a></li>
+                    <li class="flex menu-item"><a href="#">Photography</a></li>
+                    <li class="flex menu-item"><a href="#">Hire Me</a></li>
+                    <li class="flex menu-item"><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="title-banner bg-gradient-a1-a4">
+        <div class="container text-center fg-dark-color">
+            <h1>Website Article List</h1>
+            <hr>
+            <p>Ars CSS NEXT</p>
+        </div>
+    </div>
+    <div class="container">
+
+        <p>Here are some articles on this website.</p>
+
+        <article class="article-brief content-card">
+            <header class="hbar">
+                <h1 class="title"><a href="#">Short Demo Article</a></h1>
+                <div><span class="info">2020-01-18 | Filed under <a href="#">blog</a> |</span>
+                    <a href="#"><div class="chip-sm bg-gradient-a1-a2 fg-dark-color">Tag</div></a>
+                    <a href="#"><div class="chip-sm bg-gradient-a4-a3 fg-dark-color">Test</div></a>
+                    <a href="#"><div class="chip-sm bg-gradient-a1 fg-dark-color">Tag</div></a>
+                    <a href="#"><div class="chip-sm bg-gradient-a3 fg-dark-color">Test</div></a>
+                </div>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor efficitur augue sit amet aliquam.
+                Phasellus eleifend velit vel nunc condimentum porta sit amet at nunc. Praesent auctor libero quis
+                laoreet
+                ullamcorper. Sed aliquam sit amet lectus ac ultrices. Sed tempor erat non diam rutrum congue. Maecenas
+                facilisis diam ac quam condimentum, quis suscipit turpis egestas. Nullam ultricies risus sed velit
+                cursus
+                ultrices. Aenean et tincidunt felis.</p>
+
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec volutpat, nunc quis molestie
+                ullamcorper, ex eros fringilla lacus, at ullamcorper diam urna cursus enim. Fusce eget mi non dui
+                commodo
+                sodales sit amet eu diam. Phasellus eros erat, volutpat sed luctus ac, fringilla quis mi. Nunc quis
+                porta
+                est. Fusce tincidunt, augue vel tempor suscipit, risus enim volutpat ipsum, nec sodales quam nulla in
+                sem.
+                Curabitur mattis libero et justo porta venenatis. Aliquam ligula ante, sodales iaculis dui vel, placerat
+                pellentesque est.</p>
+
+            <p>Aliquam in ligula ornare, euismod lectus id, pellentesque lectus. Nulla porta neque eu arcu aliquet,
+                vitae
+                posuere enim molestie. Donec luctus dui molestie lectus varius pretium. Proin non arcu dolor. Nunc
+                pulvinar
+                urna at tincidunt facilisis. Integer ut lectus hendrerit, vehicula leo a, imperdiet massa. Donec
+                ultrices
+                maximus molestie. Vivamus interdum neque non eleifend dignissim. Donec vel mi interdum, mattis tortor
+                ac,
+                consequat lectus. Etiam aliquam leo leo, eu luctus erat posuere eu. Vestibulum dignissim lacus non sem
+                dignissim facilisis sed eu metus. Suspendisse eu aliquet tellus, eu consequat ligula. Ut egestas tortor
+                id
+                orci molestie, ac dignissim purus efficitur.</p>
+
+            <a href="#">
+                <div class="continue">
+                    Continue Reading...
+                </div>
+            </a>
+        </article>
+
+        <article class="article-brief content-card">
+            <header class="hbar">
+                <h1 class="title"><a href="#">Demo Article</a></h1>
+                <div><span class="info">2020-01-18 | Filed under <a href="#">blog</a> |</span>
+                    <div class="chip-sm">first post</div>
+                    <div class="chip-sm">test</div>
+                </div>
+            </header>
+            <p>content...</p>
+
+            <h1> I should not be blue !</h1>
+
+            <h1>Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've
+                never seen
+                anything to make me believe there's one all-powerful Force controlling everything. There's no mystical
+                energy
+                field that controls my destiny. It's all a lot of simple tricks and nonsense.</h1>
+            <p>You mean it controls your actions? Remember, a Jedi can feel the Force flowing through him. What?! Look,
+                I can
+                take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going.</p>
+            <p>Ye-ha! I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic
+                mission to
+                Alderaan-- Alderaan? <strong> I'm not going to Alderaan.</strong> <em> I've got to go home.</em> It's
+                late, I'm
+                in for it as it is.</p>
+            <h2>No! Alderaan is peaceful. We have no weapons. You can't possibly…</h2>
+            <p>I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic mission to
+                Alderaan-- I don't know what you're talking about. I am a member of the Imperial Senate on a diplomatic
+                mission
+                to Alderaan--</p>
+            <ol>
+                <li>I want to come with you to Alderaan. There's nothing for me here now. I want to learn the ways of
+                    the Force
+                    and be a Jedi, like my father before me.</li>
+                <li>Obi-Wan is here. The Force is with him.</li>
+                <li>You are a part of the Rebel Alliance and a traitor! Take her away!</li>
+            </ol>
+
+            <h3>Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is.</h3>
+            <p>Red Five standing by. I suggest you try it again, Luke. This time, let go your conscious self and act on
+                instinct. Ye-ha! I find your lack of faith disturbing. A tremor in the Force. The last time I felt it
+                was in the
+                presence of my old master.</p>
+            <ul>
+                <li>Don't act so surprised, Your Highness. You weren't on any mercy mission this time. Several
+                    transmissions
+                    were beamed to this ship by Rebel spies. I want to know what happened to the plans they sent you.
+                </li>
+                <li>Hey, Luke! May the Force be with you.</li>
+                <li>The plans you refer to will soon be back in our hands.</li>
+            </ul>
+
+            <a href="#">
+                <div class="continue">
+                    Continue Reading...
+                </div>
+            </a>
+        </article>
+
+        <hr>
+        <button onclick="toggleDark()">Toggle Dark mode</button>
+        <div class="flex-layout horizontal center">
+            <pre>&nbsp;______________________________<br>&lt;&nbsp;I&nbsp;mount&nbsp;my&nbsp;soul&nbsp;at&nbsp;/dev/null&nbsp;&gt;<br>&nbsp;------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;^__^<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;(oo)\_______<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(__)\&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)\/\<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||----w&nbsp;|<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||</pre>
+        </div>
+
+    </div>
+    <div class="height-20"></div>
+    <footer class="footer box-shadow">
+        <div class="footer-top">
+            <div class="container flex-layout horizontal wrap">
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Extra Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Extra Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Extra Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+                <ul class="flex link-list">
+                    <li class="title"><a href="#">Extra Section Title</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+                    <li class=""><a href="#">Link</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="flex-layout horizontal wrap">
+                <div class="flex">
+                    Left
+                </div>
+                <div class="flex">
+                    Center
+                </div>
+                <div>
+                    Right
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

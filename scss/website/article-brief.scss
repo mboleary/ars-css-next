@@ -1,0 +1,48 @@
+// Contains styling for an article brief
+
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:list';
+
+@use '../colors';
+@use "../layout";
+
+$title-color: map.get(colors.$accent-colors, 2);
+$info-color-dark: #ccc;
+$info-color-light: #333;
+
+$continue-btn-bg-color: #ccc;
+$continue-btn-bg-color-hover: #eee;
+$continue-btn-fg-color: black;
+
+.article-brief {
+    .title {
+        color: $title-color;
+
+        & > * {
+            color: $title-color;
+        }
+    }
+    .info {
+        color: $info-color-light;
+        font-family: ultralight;
+
+        @media only screen and (prefers-color-scheme: dark) {
+            color: $info-color-dark;
+        }
+    
+        body[dark] &  {
+            color: $info-color-dark;
+        }
+    }
+    .continue {
+        width: 100%;
+        text-align: center;
+        background-color: $continue-btn-bg-color;
+        color: $continue-btn-fg-color;
+        
+        &:hover {
+            background-color: $continue-btn-bg-color-hover;
+        }
+    }
+}

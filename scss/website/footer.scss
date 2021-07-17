@@ -9,6 +9,8 @@
 
 // Footer classes
 
+$footer-shadow-color: #555;
+
 $footer-top-bg-color: color.adjust(colors.$dark-color, $lightness: -5%);
 $footer-top-fg-color: white;
 
@@ -16,6 +18,7 @@ $footer-bottom-bg-color: colors.$dark-color;
 $footer-bottom-fg-color: white;
 
 .footer {
+    // box-shadow: 0 -5px 10px $footer-shadow-color;
     & .footer-top {
         background-color: $footer-top-bg-color;
         padding: layout.$default-margin 0;

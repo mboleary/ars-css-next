@@ -18,6 +18,7 @@
 // For the Website
 @use './website/header.scss';
 @use './website/footer.scss';
+@use './website/article-brief.scss';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;
