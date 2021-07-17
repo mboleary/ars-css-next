@@ -1,0 +1,43 @@
+// Contains the styling for navigation elements in the website
+
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:list';
+
+@use '../colors';
+@use "../layout";
+
+$navbar-bg-color: #222;
+$navbar-fg-color: #808080;
+$navbar-fg-title-color: white;
+
+$toc-fg-color: $navbar-fg-title-color;
+$toc-bg-color: $navbar-fg-color;
+
+// Navigation Bar
+.navbar {
+    transition: height 1s;
+    padding: (layout.$default-margin * 2) 0;
+    background-color: $navbar-bg-color;
+    color: $navbar-fg-color;
+    font-family: semibold;
+    & .items {
+        & > *:not(.title):not(.action) {
+            margin-right: layout.$default-margin;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        & .title, & .action {
+            color: $navbar-fg-title-color;
+        }
+    }
+    // Expanded Table of Contents
+    & .toc {
+        color: $toc-fg-color;
+        & .title, & .action {
+            color: $navbar-fg-title-color;
+        }
+    }
+}
+
