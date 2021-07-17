@@ -8,6 +8,7 @@
 @use "../layout";
 
 $title-color: map.get(colors.$accent-colors, 2);
+$title-color-hover: color.adjust(map.get(colors.$accent-colors, 2), $lightness: 15%);
 $info-color-dark: #ccc;
 $info-color-light: #333;
 
@@ -21,6 +22,9 @@ $continue-btn-fg-color: black;
 
         & > * {
             color: $title-color;
+            &:hover {
+                color: $title-color-hover;
+            }
         }
     }
     .info {

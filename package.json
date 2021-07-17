@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mboleary/ars-css-next#readme",
   "dependencies": {
+    "feather-icons": "^4.28.0",
     "pattern.css": "^1.0.0"
   }
 }

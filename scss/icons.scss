@@ -1,0 +1,13 @@
+// Contains classes used with icons
+
+@use "layout";
+
+.icon {
+    margin: auto (layout.$default-margin);
+    &.left {
+        margin-left: 0;
+    }
+    &.right {
+        margin-right: 0;
+    }
+}
