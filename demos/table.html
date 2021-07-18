@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <title>Testing Ars CSS NEXT styling</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="/node_modules/feather-icons/dist/feather.min.js"></script>
     <script>
         function toggleDark() {
             const elem = document.body;
@@ -18,6 +19,11 @@
                 elem.removeAttribute("dark");
             }
         }
+    </script>
+    <script>
+        window.addEventListener('load', (e) => {
+            feather.replace();
+        });
     </script>
 </head>
 
@@ -105,6 +111,198 @@
                 </tr>
             </tfoot>
         </table>
+
+        <table>
+            <caption> Default Color </caption>
+            <thead class="">
+                <tr>
+                    <th>Month</th>
+                    <th>Savings</th>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th>Col 3</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td class="error-color-fg">-$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum</td>
+                    <td>$180</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h2>Pagination</h2>
+        <p>This is a non-functional mockup</p>
+
+        <table>
+            <caption> Table </caption>
+            <thead class="bg-gradient-a1-a2">
+                <tr>
+                    <th>
+                        <div class="flex-layout horizontal">
+                            <div class="margin-top-bottom-auto">Month</div>
+                            <div class="flex"></div>
+                            <div class="icon-btn"><i data-feather="filter"></i>
+                                <div class="badge-container bottom-right">
+                                    <div class="badge"></div>
+                                </div>
+                            </div>
+                    </th>
+                    <th>
+                        <div class="flex-layout horizontal">
+                            <div class="margin-top-bottom-auto">Savings</div>
+                            <div class="flex"></div>
+                            <div class="icon-btn"><i data-feather="filter"></i></div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="flex-layout horizontal">
+                            <div class="margin-top-bottom-auto">Col 1</div>
+                            <div class="flex"></div>
+                            <div class="icon-btn"><i data-feather="filter"></i></div>
+                    </th>
+                    <th>
+                        <div class="flex-layout horizontal">
+                            <div class="margin-top-bottom-auto">Col 2</div>
+                            <div class="flex"></div>
+                            <div class="icon-btn"><i data-feather="filter"></i></div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="flex-layout horizontal">
+                            <div class="margin-top-bottom-auto">Col 3</div>
+                            <div class="flex"></div>
+                            <div class="icon-btn"><i data-feather="filter"></i></div>
+                        </div>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>January</td>
+                    <td>$100</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td class="error-color-fg">-$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Sum</td>
+                    <td>$180</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="flex-layout horizontal">
+            <div class="flex"></div>
+            <div class="icon-btn"><i data-feather="chevrons-left"></i></div>
+            <div class="icon-btn"><i data-feather="chevron-left"></i></div>
+            <div class="margin-top-bottom-auto">1 of 5</div>
+            <div class="icon-btn"><i data-feather="chevron-right"></i></div>
+            <div class="icon-btn"><i data-feather="chevrons-right"></i></div>
+        </div>
 
         <hr>
         <button onclick="toggleDark()">Toggle Dark mode</button>

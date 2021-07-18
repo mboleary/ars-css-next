@@ -173,6 +173,24 @@ body[dark] {
     background-color: $background-color-dark;
 }
 
+// Other colors
+
+.error-color-fg {
+    color: $error-color;
+}
+
+.error-color-bg {
+    background-color: $error-color;
+}
+
+.warn-color-fg {
+    color: $warn-color;
+}
+
+.warn-color-bg {
+    background-color: $warn-color;
+}
+
 // Gradients
 
 @function lingrad1($deg, $color) {

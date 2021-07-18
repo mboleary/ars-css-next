@@ -4,10 +4,40 @@
 
 .icon {
     margin: auto (layout.$default-margin);
+    width: 24px;
+    height: 24px;
     &.left {
         margin-left: 0;
     }
     &.right {
         margin-right: 0;
+    }
+}
+
+$btn-bg-hover-color-light: #00000044;
+$btn-bg-hover-color-dark: #ffffff88;
+
+
+// Icon Button
+.icon-btn {
+    padding: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    &:hover {
+
+        background-color: $btn-bg-hover-color-light;
+
+        @media only screen and (prefers-color-scheme: dark) {
+            & {
+                background-color: $btn-bg-hover-color-dark;
+            }
+        }
+
+
+        body[dark] & {
+            background-color: $btn-bg-hover-color-dark;
+        }
     }
 }
