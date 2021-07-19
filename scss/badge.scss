@@ -11,15 +11,30 @@ $badge-color: currentColor;
     background-color: $badge-color;
     border-radius: math.div($badge-size, 2);
     &.bottom-right {
-        position: relative;
+        position: absolute;
         bottom: 0;
+        right: 0;
+    }
+    &.bottom-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &.top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &.top-right {
+        position: absolute;
+        top: 0;
         right: 0;
     }
 }
 
 .badge-container {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     position: relative;
     top: 0;
     left: 0;

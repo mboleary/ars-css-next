@@ -30,14 +30,18 @@ $btn-bg-hover-color-dark: #ffffff88;
         background-color: $btn-bg-hover-color-light;
 
         @media only screen and (prefers-color-scheme: dark) {
-            & {
+            &:not(.dark-backdrop):not(.light-backdrop) {
                 background-color: $btn-bg-hover-color-dark;
             }
         }
 
 
-        body[dark] & {
+        body[dark] &:not(.light-backdrop), &.dark-backdrop {
             background-color: $btn-bg-hover-color-dark;
+        }
+
+        &.light-backdrop {
+            background-color: $btn-bg-hover-color-light;
         }
     }
 }
