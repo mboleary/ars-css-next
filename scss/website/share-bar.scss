@@ -1,0 +1,14 @@
+// Contains the styling needed for a share bar
+
+$width: 32px;
+$height: 32px;
+
+.share-item {
+    width: $width;
+    height: $height;
+
+    &.facebook {
+        background-color: #4267B2;
+        
+    }
+}

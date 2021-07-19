@@ -17,3 +17,5 @@ demos/font
 demos/scss
 demos/node_modules
 temp
+
+private_assets

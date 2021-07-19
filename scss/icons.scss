@@ -12,6 +12,9 @@
     &.right {
         margin-right: 0;
     }
+    &.center {
+        padding: auto;
+    }
 }
 
 $btn-bg-hover-color-light: #00000044;
