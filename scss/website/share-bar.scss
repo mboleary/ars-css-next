@@ -1,9 +1,15 @@
 // Contains the styling needed for a share bar
 
+@use "../layout.scss";
+
 $width: 32px;
 $height: 32px;
 
 .share-item {
     width: $width;
     height: $height;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto (layout.$default-margin);
 }
