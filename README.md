@@ -31,4 +31,6 @@ For the website components, there is a Share Bar, where a list of links to post 
 - Twitter: https://about.twitter.com/en/who-we-are/brand-toolkit
 - Reddit: https://www.redditinc.com/brand
 - Hacker News: (no asset packs or logo guidelines are provided, I would just use the one from [https://www.ycombinator.com/](https://www.ycombinator.com/))
-- Lobsters: (same story as Hacker News, but their image is a base-64'd letter L that's 16x16px)
+- Lobsters: (same story as Hacker News, but their favicon happens to be the highest resolution one) [https://lobste.rs/](https://lobste.rs/)
+
+To include these assets properly, create a directory named `private_assets` in the home directory, and it should be symlinked into the demos directory and show up in the sharebar demo
