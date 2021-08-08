@@ -80,6 +80,12 @@ $grays: (
     box-shadow: 0 0 10px $color;
 }
 
+@mixin fg-gradient() {
+    color: transparent;
+    background-clip: text; // For Firefox
+    -webkit-background-clip: text; // For Chrome-based browsers
+}
+
 // Light (default) theme
 
 .bg-color {
@@ -210,13 +216,35 @@ body[dark] {
         background: lingrad1($deg: 103deg, $color: $color);
     }
 
+    .fg-gradient-a#{$index} {
+        background: lingrad1($deg: 103deg, $color: $color);
+        border-image: lingrad1($deg: 103deg, $color: $color) 1;
+        @include fg-gradient();
+    }
+
     @each $index2, $color2 in $accent-colors {
         @if $color2 != $color {
             .bg-gradient-a#{$index}-a#{$index2} {
                 background: lingrad2($deg: 45deg, $color1: $color, $color2: $color2);
             }
+
+            .fg-gradient-a#{$index}-a#{$index2} {
+                background: lingrad2($deg: 45deg, $color1: $color, $color2: $color2);
+                border-image: lingrad2($deg: 45deg, $color1: $color, $color2: $color2) 1;
+                @include fg-gradient();
+            }
         }
     }
+}
+
+// Grayscale backgrounds and foregrounds
+
+.bg-gradient-gray {
+    background: lingrad2($deg: 96deg, $color1: map.get($grays, 3), $color2: map.get($grays, 7));
+}
+
+.bg-gradient-lightgray {
+    background: lingrad2($deg: 96deg, $color1: map.get($grays, 7), $color2: map.get($grays, 'e'));
 }
 
 // Get white or black for title text

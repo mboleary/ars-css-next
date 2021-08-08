@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner">
+            <div class="container text-center fg-gradient-a1-a2">
+                <h1>Banner Demos</h1>
+                <hr>
+                <p>Demonstration of Banners</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Banners</h1>
+
+            <p>This is a collection of banners used to demonstrate how they work and how they can be used.</p>
+        </div>
+        <div class="banner">
+            <div class="container text-center">
+                <h1>Test</h1>
+                <hr>
+                <p>Default</p>
+            </div>
+        </div>
+        <div class="banner bg-accent-1">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-accent-1</p>
+            </div>
+        </div>
+        <div class="banner bg-accent-2">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-accent-2</p>
+            </div>
+        </div>
+        <div class="banner bg-accent-3">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-accent-3</p>
+            </div>
+        </div>
+        <div class="banner bg-accent-4">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-accent-4</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a1">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a1</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a2">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a2</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a3">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a3</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a4">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a4</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a1-a2">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a1-a2</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a2-a3">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a2-a3</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a3-a4">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a3-a4</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-a4-a1">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-a4-a1</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-gray">
+            <div class="container text-center fg-dark-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-gray</p>
+            </div>
+        </div>
+        <div class="banner bg-gradient-lightgray">
+            <div class="container text-center fg-light-color">
+                <h1>Test</h1>
+                <hr>
+                <p>bg-gradient-lightgray</p>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
