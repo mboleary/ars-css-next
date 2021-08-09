@@ -52,6 +52,12 @@ $subtitle-font-size: 1.5em;
     }
 }
 
+// This allows a footer to be inserted along with the rest of a banner
+.banner-footer-wrapper {
+    display: relative;
+
+}
+
 .banner-footer {
     font-size: unset;
     min-height: 32px;
