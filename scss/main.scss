@@ -124,3 +124,24 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
     background-size: cover;
     background-position: center;
 }
+
+// Figures
+
+figure {
+    margin: (layout.$default-margin * 2);
+    padding: (layout.$default-margin * 2);
+    background-color: colors.$dark-color;
+    & img {
+        width: 100%;   
+    }
+    & figcaption {
+        margin-top: (layout.$default-margin * 2);
+        color: colors.$text-color-dark;
+        font-family: semibold;
+        text-align: center;
+        & .figure {
+            color: #ccc;
+            font-family: ultralight;
+        }
+    }
+}
