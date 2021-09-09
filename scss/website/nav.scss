@@ -20,13 +20,16 @@ $navbar-fg-title-color: white;
     font-family: semibold;
     & .items {
         & > *:not(.title):not(.action) {
-            margin-right: layout.$default-margin;
+            margin-right: layout.$default-margin * 3;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }
         & .title, & .action:hover {
             color: $navbar-fg-title-color;
+        }
+        & .title {
+            margin-right: layout.$default-margin * 2;
         }
     }
     // Expanded Table of Contents
