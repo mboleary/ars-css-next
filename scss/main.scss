@@ -23,6 +23,7 @@
 @use './website/article-brief.scss';
 @use './website/nav.scss';
 @use './website/share-bar.scss';
+@use './website/link-button.scss';
 
 .vbar {
     border-left: layout.$default-margin solid currentColor;

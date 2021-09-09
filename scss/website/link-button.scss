@@ -1,0 +1,26 @@
+// Contains the styling needed for link buttons
+
+@use "../layout.scss";
+
+$border-radius: 5px;
+$default-bg-color: #333;
+$default-active-bg-color: #eee;
+
+a.button {
+    border: 0;
+    border-radius: $border-radius;
+    background-color: $default-bg-color;
+    padding: (layout.$default-margin * 2);
+    font-family: semibold;
+    text-align: center;
+    display: inline-block;
+
+    &:link, &:visited {
+        color: #eee;
+    }
+
+    &:hover, &:active {
+        background-color: $default-active-bg-color;
+        color: $default-bg-color;
+    }
+}
