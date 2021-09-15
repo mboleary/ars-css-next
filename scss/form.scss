@@ -1,5 +1,7 @@
 // Styling for Form elements
 
+@use 'sass:map';
+
 @use 'colors';
 @use 'layout';
 
@@ -9,7 +11,7 @@ $input-bg-color: white;
 $fieldset-margin: layout.$default-margin * 2;
 $body-padding: layout.$default-margin * 2;
 $form-font: light;
-// $form-font-size: 16px;
+$accent-color: map.get(colors.$accent-colors, 1);
 
 form {
     &:not(.no-margin) {
@@ -108,11 +110,11 @@ textarea {
 }
 
 input {
+    accent-color: $accent-color;
     &:not([type="image"]) {
         @extend %input-element;
     }
-}
-
-input[type="image"] {
-    width: 100%;
+    &[type="image"] {
+        width: 100%;
+    }
 }
