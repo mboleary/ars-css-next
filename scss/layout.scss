@@ -176,6 +176,26 @@ $grid-breakpoints: (
     flex: 0 1 auto;
 }
 
+// Responsive flex (turns from row to column at a breakpoint)
+@each $index, $size in $breakpoints {
+    @media only screen and (max-width: $size) {
+        .flex-layout.responsive.bp-#{$index} {
+            flex-direction: column;
+            .reverse {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    @media only screen and (min-width: ($size + 1)) {
+        .flex-layout.responsive.bp-#{$index} {
+            flex-direction: row;
+            .reverse {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
 // Constant Height
 
 .height-10 {
