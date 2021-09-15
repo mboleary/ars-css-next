@@ -1,5 +1,7 @@
 // Dialogs and Backdrops
 
+@use "./colors.scss";
+
 $backdrop-color: #00000088;
 
 // Backdrops
@@ -26,4 +28,18 @@ $backdrop-color: #00000088;
 .dialog {
     border: 2px solid black;
     padding: 0;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    .dialog {
+        @include colors.bg-color(colors.$background-color-dark);
+        @include colors.text-color(colors.$text-color-dark);
+    }
+}
+
+body[dark] {
+    .dialog {
+        @include colors.bg-color(colors.$background-color-dark);
+        @include colors.text-color(colors.$text-color-dark);
+    }
 }
