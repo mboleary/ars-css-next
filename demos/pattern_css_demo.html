@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/pattern.css/dist/pattern.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner bg-accent-1 fg-dark-color pattern-vertical-lines-lg">
+            <div class="container text-center fg-light-color overflow-visible">
+                <div class="rel-layout">
+                    <div class="rel z-10">
+                        <h1>Pattern.css</h1>
+                        <hr>
+                        <p>Ars CSS NEXT</p>
+                    </div>
+                    <div class="abs fill bottom-right accent-2 pattern-dots-lg "></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="accent-1 hbar"> Pattern Demos </h1>
+            
+            <p>This is a demo of using Pattern.css within this style framework, and the <code>rel-layout</code> class.</p>
+
+            <figure>
+                <img src="./static/img1.jpg">
+                <figcaption><span class="figure">Fig.1:</span>This is a test</figcaption>
+            </figure>
+
+            <div class="rel-layout">
+                <figure class="rel z-10">
+                    <img src="./static/img1.jpg">
+                    <figcaption><span class="figure">Fig.1:</span>This is a test</figcaption>
+                </figure>
+                <div class="abs fill bottom-right accent-1 pattern-dots-sm"></div>
+            </div>
+
+            <div class="height-20"></div>
+
+            <div class="rel-layout">
+                <h2 class="rel z-10">I'm a fancy header</h2>
+                <div class="abs fill bottom-right p-5 accent-2 pattern-dots-sm"></div>
+                <div class="abs accent-4 pattern-dots-sm" style="height:20px;width:50%;left:15px;bottom:-10px;"></div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet purus semper, sollicitudin dui non, commodo elit. Nunc tempus sem eget ligula commodo scelerisque. Sed ornare dui quis massa iaculis placerat. Sed at lacinia ligula, id dignissim dui. Donec ut erat vitae nunc dapibus mollis. Maecenas viverra sit amet purus nec sollicitudin. Phasellus nibh dolor, tincidunt a neque eu, pretium congue sem. Cras ac porta augue. Sed rutrum blandit egestas. Vivamus interdum urna et pharetra suscipit. Ut et metus a leo mollis rhoncus at in turpis. Etiam sed massa ut turpis ullamcorper consequat. Aliquam ultrices luctus tellus et lobortis.</p>
+
+            <p>Maecenas et mi id ex suscipit commodo eget eu orci. Donec porttitor dapibus tincidunt. Donec congue nisi vel nisl condimentum imperdiet et quis diam. Donec elit ligula, iaculis sit amet libero ac, ornare euismod erat. Vestibulum ornare, urna quis pharetra semper, diam mi tincidunt est, sed molestie ligula nulla nec nunc. Praesent sit amet imperdiet urna, eget bibendum diam. Aliquam erat volutpat. Ut enim tortor, iaculis non sem a, porttitor efficitur mi. Curabitur sagittis dapibus ex, id venenatis risus hendrerit vel.</p>
+                
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam eget tortor pharetra diam ullamcorper imperdiet. Ut at congue nulla, eget lobortis nibh. Aliquam erat volutpat. Aenean porta nunc consectetur lectus tempus sollicitudin. Mauris auctor justo a velit ullamcorper malesuada. Etiam laoreet, sapien et gravida porta, magna velit volutpat eros, id fermentum quam lorem in augue. Cras efficitur quis nulla vitae dictum. Suspendisse ut ornare lacus. Suspendisse et lectus sapien. Vivamus mollis lorem quis sollicitudin porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed egestas rutrum erat eu feugiat. Integer egestas risus vel metus molestie eleifend.</p>
+                
+            <p>In hac habitasse platea dictumst. Aenean ultricies dui vel nibh rutrum condimentum ultrices sed enim. Donec vel nunc nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis est sit amet purus aliquam, nec lobortis nisl dictum. Morbi nec maximus justo. Nulla ac odio et velit aliquet rutrum. Cras sem purus, condimentum vitae lobortis a, posuere sed velit. Nam volutpat luctus diam nec viverra. Donec est mi, posuere quis suscipit nec, consectetur ut orci.</p>
+                
+            <p>Etiam massa erat, dapibus nec ipsum vel, luctus pharetra metus. Etiam malesuada porttitor urna nec semper. Maecenas vestibulum id elit ac gravida. Mauris id est ac tortor varius eleifend. Aliquam erat volutpat. Vivamus diam sem, lacinia vel fermentum sit amet, scelerisque in velit. Suspendisse dui ex, commodo id vehicula vitae, mattis vel urna. Quisque ac nisi rutrum, rutrum erat placerat, ultricies enim. In tempus diam tellus, sed posuere leo ornare non.</p>
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
