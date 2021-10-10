@@ -25,6 +25,9 @@
 @use './website/share-bar.scss';
 @use './website/link-button.scss';
 
+// General Search Page
+@use './search/search.scss';
+
 .vbar {
     border-left: layout.$default-margin solid currentColor;
     padding-left: layout.$default-margin;

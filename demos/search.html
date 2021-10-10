@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="/node_modules/feather-icons/dist/feather.min.js"></script>
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+        <script>
+            window.addEventListener('load', (e) => {
+                feather.replace();
+            });
+        </script>
+    </head>
+    <body dark >
+        <div class="banner text-center">
+            <div class="container full-width">
+                <div class="search-container full-width flex-layout horizontal">
+                    <i data-feather="search" class="search-icon"></i>
+                    <input type="search" class="search-input flex fg-color" placeholder="Search...">
+                </div>
+                <div class="search-helper-text">
+                    <small>Hit <kbd>Enter</kbd> to search.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
