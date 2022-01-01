@@ -1,0 +1,34 @@
+// Contains main elements for a search page
+
+@use 'sass:math';
+@use "../layout.scss";
+
+$search-height: 56px;
+
+$font-diff: 15px;
+$padding: math.div($font-diff, 2);
+$search-font-size: $search-height - $font-diff;
+
+.search-container {
+    width: 100%;
+    border-radius: math.div($search-height, 2);
+    border: 2px solid #eee;
+}
+
+.search-icon {
+    margin: $padding 0 $padding $padding;
+    height: $search-font-size;
+    width: $search-font-size;
+}
+
+input.search-input {
+    background-color: transparent;
+    height: $search-height;
+    font-size: $search-font-size;
+    border: 0;
+    outline: 0;
+}
+
+.search-helper-text {
+    margin-top: layout.$default-margin;
+}
