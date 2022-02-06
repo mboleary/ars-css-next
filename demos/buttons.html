@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner bg-gradient-a2-a4">
+            <div class="container text-center">
+                <h1>Button Demos</h1>
+                <hr>
+                <p>Ars CSS NEXT</p>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="accent-2 hbar"> Button styling </h1>
+
+            <p>This is a demonstration of buttons. </p>
+
+            <h2> Standard Button Types </h2>
+            <p>
+                <b>Default:</b><br>
+                <code>button</code>
+            </p>
+            <button>Button</button>
+
+            <p>
+                <b>Input button:</b><br>
+                <code>input[type="button"]</code>
+            </p>
+            <input type="button" value="Button">
+
+            <p>
+                <b>Input Submit button:</b><br>
+                <code>input[type="submit"]</code>
+            </p>
+            <input type="submit">
+
+            <p>
+                <b>Input Reset button:</b><br>
+                <code>input[type="submit"]</code>
+            </p>
+            <input type="reset">
+
+            <p>
+                <b>Button class:</b><br>
+                <code>.button</code>
+            </p>
+            <a href="#" class="button">Button</a>
+
+
+            <h2> Primary Buttons </h2>
+            <p>
+                <b>Default:</b><br>
+                <code>button.primary</code>
+            </p>
+            <button class="primary">Button</button>
+
+            <p>
+                <b>Input button:</b><br>
+                <code>input[type="button"].primary</code>
+            </p>
+            <input type="button" value="Button" class="primary">
+
+            <p>
+                <b>Input Submit button:</b><br>
+                <code>input[type="submit"].primary</code>
+            </p>
+            <input type="submit" class="primary">
+
+            <p>
+                <b>Input Reset button:</b><br>
+                <code>input[type="submit"].primary</code>
+            </p>
+            <input type="reset" class="primary">
+
+            <p>
+                <b>Button class:</b><br>
+                <code>.button.primary</code>
+            </p>
+            <a href="#" class="button primary">Button</a>
+
+
+            <h2> Secondary Buttons </h2>
+            <p>
+                <b>Default:</b><br>
+                <code>button.secondary</code>
+            </p>
+            <button class="secondary">Button</button>
+
+            <p>
+                <b>Input button:</b><br>
+                <code>input[type="button"].secondary</code>
+            </p>
+            <input type="button" value="Button" class="secondary">
+
+            <p>
+                <b>Input Submit button:</b><br>
+                <code>input[type="submit"].secondary</code>
+            </p>
+            <input type="submit" class="secondary">
+
+            <p>
+                <b>Input Reset button:</b><br>
+                <code>input[type="submit"].secondary</code>
+            </p>
+            <input type="reset" class="secondary">
+
+            <p>
+                <b>Button class:</b><br>
+                <code>.button.secondary</code>
+            </p>
+            <a href="#" class="button secondary">Button</a>
+
+
+            <h2> Tertiary Buttons </h2>
+            <p>
+                <b>Default:</b><br>
+                <code>button.tertiary</code>
+            </p>
+            <button class="tertiary">Button</button>
+
+            <p>
+                <b>Input button:</b><br>
+                <code>input[type="button"].tertiary</code>
+            </p>
+            <input type="button" value="Button" class="tertiary">
+
+            <p>
+                <b>Input Submit button:</b><br>
+                <code>input[type="submit"].tertiary</code>
+            </p>
+            <input type="submit" class="tertiary">
+
+            <p>
+                <b>Input Reset button:</b><br>
+                <code>input[type="submit"].tertiary</code>
+            </p>
+            <input type="reset" class="tertiary">
+
+            <p>
+                <b>Button class:</b><br>
+                <code>.button.tertiary</code>
+            </p>
+            <a href="#" class="button tertiary">Button</a>
+            
+            <!-- Page content goes here -->
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
