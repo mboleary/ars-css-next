@@ -1,0 +1,14 @@
+@use 'sass:math';
+
+$img_circle_size: 256px;
+
+.landing_circle {
+    width: $img_circle_size;
+    height: $img_circle_size;
+    border-radius: math.div($img_circle_size, 2);
+    overflow: hidden;
+}
+
+.landing_circle > img {
+    width: 100%;
+}

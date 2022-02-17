@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#00121a"> <!-- Colored Chrome Mobile Tabs! -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <title>Testing Ars CSS NEXT styling</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script>
+            function toggleDark() {
+                const elem = document.body;
+                let state = elem.getAttribute("dark");
+                if (state === null) {
+                    elem.setAttribute("dark", "");
+                } else {
+                    elem.removeAttribute("dark");
+                }
+            }
+        </script>
+    </head>
+    <body dark >
+        <div class="title-banner bg-gradient-a2-a1 fg-dark-color">
+            <div class="container text-center full-width">
+                <div class="flex-layout horizontal ">
+                    <div class="landing_circle">
+                        <img src="/static/me.jpg">
+                    </div>
+                    <div class="flex flex-layout vertical center">
+                        <div class="">
+                            <h1>Brady O'Leary</h1>
+                            <p>Full-stack Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>About me</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor efficitur augue sit amet aliquam.
+                Phasellus eleifend velit vel nunc condimentum porta sit amet at nunc. Praesent auctor libero quis
+                laoreet
+                ullamcorper. Sed aliquam sit amet lectus ac ultrices. Sed tempor erat non diam rutrum congue. Maecenas
+                facilisis diam ac quam condimentum, quis suscipit turpis egestas. Nullam ultricies risus sed velit
+                cursus
+                ultrices. Aenean et tincidunt felis.</p>
+            
+            <!-- Page content goes here -->
+
+            <hr>
+            <button onclick="toggleDark()">Toggle Dark mode</button>
+        </div>
+        <div class="height-20"></div>
+    </body>
+</html>
