@@ -14,13 +14,13 @@ $form-font: light;
 $accent-color: map.get(colors.$accent-colors, 1);
 $border-radius: 5px;
 
-form {
+%form {
     &:not(.no-margin) {
         margin: (layout.$default-margin * 2) 0;
     }
 }
 
-form .body {
+%form-body {
     border-left: 1px solid colors.$border-color-light;
     border-bottom: 1px solid colors.$border-color-light;
     border-right: 1px solid colors.$border-color-light;
@@ -34,6 +34,22 @@ form .body {
     body[dark] & {
         border-color: colors.$border-color-dark;
     }
+}
+
+form {
+    @extend %form;
+}
+
+form .body {
+    @extend %form-body;
+}
+
+.form {
+    @extend %form;
+}
+
+.form .body {
+    @extend %form-body;
 }
 
 fieldset {
