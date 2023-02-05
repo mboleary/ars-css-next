@@ -3,6 +3,7 @@
 $font-path: "/font";
 $font-format: "woff2";
 $font-extension: "." + $font-format;
+$line-height: 1.5;
 
 @font-face {
     font-family: extrabold;
@@ -47,7 +48,8 @@ $font-extension: "." + $font-format;
 // Define which elements use these fonts
 
 body {
-    font-family: light
+    font-family: light;
+    line-height: $line-height;
 }
 
 h1, h2, h3 {

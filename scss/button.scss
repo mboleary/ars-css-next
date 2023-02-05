@@ -255,7 +255,7 @@ input[type="submit"] {
     @extend %button-base;
     border: 0;
 
-    color: currentColor;
+    color: $default-fg-color;
     background-color: $default-bg-color;
 
     &:hover {
@@ -516,7 +516,7 @@ input[type="reset"] {
     @extend %button-base;
     border: 1px solid currentColor;
 
-    color: currentColor;
+    color: $default-fg-color;
     background-color: transparent;
 
     &:link, &:visited {
