@@ -13,6 +13,7 @@ $body-padding: layout.$default-margin * 2;
 $form-font: light;
 $accent-color: map.get(colors.$accent-colors, 1);
 $border-radius: 5px;
+$form-label-line-height: 1;
 
 %form {
     &:not(.no-margin) {
@@ -79,6 +80,7 @@ label {
     &:not(.option) {
         font-family: semibold;
     }
+    line-height: $form-label-line-height;
 }
 
 legend {
