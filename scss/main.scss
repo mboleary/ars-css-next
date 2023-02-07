@@ -15,6 +15,7 @@
 @use "dialogs";
 @use 'icons';
 @use 'badge';
+@use 'button';
 
 // Project-specific components
 // For the Website
@@ -24,6 +25,7 @@
 @use './website/nav.scss';
 @use './website/share-bar.scss';
 @use './website/link-button.scss';
+@use './landingpage/main.scss';
 
 // General Search Page
 @use './search/search.scss';
@@ -69,42 +71,6 @@ kbd.dark {
     background-color: #111;
     border-color: white;
     color: white;
-}
-
-// Buttons
-
-button, input[type="button"], input[type="submit"], input[type="reset"] {
-    padding: (layout.$default-margin * 2);
-    font-family: medium;
-    border-radius: 2px;
-    border: 1px solid currentColor;
-    color: currentColor;
-    background-color: transparent;
-    &:hover {
-        border-color: transparent;
-        color: colors.$background-color-light;
-        background-color: colors.$text-color-light;
-        @media only screen and (prefers-color-scheme: dark) {
-            color: colors.$background-color-dark;
-            background-color: colors.$text-color-dark;
-        }
-        body[dark] & {
-            color: colors.$background-color-dark;
-            background-color: colors.$text-color-dark;
-        }
-    }
-    @each $index, $color in colors.$accent-colors {
-        .accent-#{$index} {
-            border-color: $color;
-            color: $color;
-        }
-
-        &:hover.accent-#{$index} {
-            border-color: transparent;
-            background-color: $color;
-            color: colors.getTextColor($color);
-        }
-    }
 }
 
 // Special Backgrounds

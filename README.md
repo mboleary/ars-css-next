@@ -1,4 +1,4 @@
-# Ars CSS NEXT
+# Ars Materia
 
 The next version of Stylesheets for my website as well as some other projects.
 

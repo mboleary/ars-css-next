@@ -12,14 +12,16 @@ $fieldset-margin: layout.$default-margin * 2;
 $body-padding: layout.$default-margin * 2;
 $form-font: light;
 $accent-color: map.get(colors.$accent-colors, 1);
+$border-radius: 5px;
+$form-label-line-height: 1;
 
-form {
+%form {
     &:not(.no-margin) {
         margin: (layout.$default-margin * 2) 0;
     }
 }
 
-form .body {
+%form-body {
     border-left: 1px solid colors.$border-color-light;
     border-bottom: 1px solid colors.$border-color-light;
     border-right: 1px solid colors.$border-color-light;
@@ -33,6 +35,22 @@ form .body {
     body[dark] & {
         border-color: colors.$border-color-dark;
     }
+}
+
+form {
+    @extend %form;
+}
+
+form .body {
+    @extend %form-body;
+}
+
+.form {
+    @extend %form;
+}
+
+.form .body {
+    @extend %form-body;
 }
 
 fieldset {
@@ -62,6 +80,7 @@ label {
     &:not(.option) {
         font-family: semibold;
     }
+    line-height: $form-label-line-height;
 }
 
 legend {
@@ -74,7 +93,7 @@ legend {
 %input-element {
     font-family: $form-font;
     padding: layout.$default-margin;
-    border-radius: 5px;
+    border-radius: $border-radius;
     border: 1px solid colors.$border-color-light;
     @media only screen and (prefers-color-scheme: dark) {
         & {
@@ -105,13 +124,13 @@ select {
 
 textarea {
     @extend %input-element;
-    border-radius: 5px 5px 0px 5px;
+    border-radius: $border-radius $border-radius 0px $border-radius;
     @extend %vertical-resize;
 }
 
 input {
     accent-color: $accent-color;
-    &:not([type="image"]) {
+    &:not([type="image"]):not([type="button"]):not([type="reset"]):not([type="submit"]) {
         @extend %input-element;
     }
     &[type="image"] {

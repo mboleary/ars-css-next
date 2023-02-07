@@ -1,0 +1,600 @@
+/**
+ * Contains styling for buttons
+ */
+
+@use "layout.scss";
+@use "colors.scss";
+@use 'form.scss';
+
+$default-bg-color: #333;
+$default-fg-color: #eee;
+$default-active-bg-color: #eee;
+$default-active-fg-color: #333;
+
+@mixin button-customize($bg-color: transparent, $fg-color: currentColor, $border: 1, $fill: 0) {
+    color: $fg-color;
+    
+    @if $border {
+        border: 1px solid $fg-color;
+        padding: (layout.$default-margin * 2);
+    } @else {
+        padding: (layout.$default-margin * 2) + 1;
+    }
+    @if $fill {
+        background-color: $bg-color;
+    } @else {
+        background-color: transparent;
+    }
+}
+
+%button-base {
+    padding: (layout.$default-margin * 2);
+    font-family: medium;
+    border-radius: form.$border-radius;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+// Default to primary for the submit and reset buttons, then secondary for everything else
+
+
+
+
+
+
+
+
+
+// button, input[type="button"], input[type="submit"], input[type="reset"], .button {
+//     @extend %button-base;
+//     border: 1px solid currentColor;
+
+//     &.primary {
+//         background-color: $default-bg-color;
+//         border: 0;
+//     }
+
+//     &.secondary {
+
+//     }
+
+//     &.tertiary {
+        
+//     }
+
+//     color: currentColor;
+//     background-color: transparent;
+//     &:hover {
+//         border-color: transparent;
+//         color: colors.$background-color-light;
+//         background-color: colors.$text-color-light;
+//         @media only screen and (prefers-color-scheme: dark) {
+//             color: colors.$background-color-dark;
+//             background-color: colors.$text-color-dark;
+//         }
+//         body[dark] & {
+//             color: colors.$background-color-dark;
+//             background-color: colors.$text-color-dark;
+//         }
+//     }
+
+
+//     @each $index, $color in colors.$accent-colors {
+//         &.accent-#{$index} {
+//             border-color: $color;
+//             color: $color;
+//         }
+
+//         &:hover.accent-#{$index} {
+//             border-color: transparent;
+//             background-color: $color;
+//             color: colors.getTextColor($color);
+//         }
+//     }
+// }
+
+
+
+button {
+    @extend %button-base;
+    border: 1px solid currentColor;
+
+    color: currentColor;
+    background-color: transparent;
+
+    &:hover {
+        border-color: transparent;
+        color: $default-active-fg-color;
+        background-color: $default-active-bg-color;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+        body[dark] & {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+    }
+
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            border-color: $color;
+            color: $color;
+        }
+
+        &:hover.accent-#{$index} {
+            border-color: transparent;
+            background-color: $color;
+            color: colors.getTextColor($color);
+            @media only screen and (prefers-color-scheme: dark) {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+            body[dark] & {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+        }
+    }
+
+    &.primary {
+        background-color: $default-bg-color;
+        color: $default-fg-color;
+        border: 0;
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                background-color: $color;
+                color: colors.getTextColor($color);
+            }
+    
+            &:hover.accent-#{$index} {
+                background-color: $default-active-bg-color;
+                color: $color;
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+                body[dark] & {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+            }
+        }
+    }
+
+    // The secondary is the same as default
+    // &.secondary {
+
+    // }
+
+    &.tertiary {
+        border: 0;
+    }
+}
+
+input[type="button"] {
+    @extend %button-base;
+    border: 1px solid currentColor;
+
+    color: currentColor;
+    background-color: transparent;
+
+    &:hover {
+        border-color: transparent;
+        color: $default-active-fg-color;
+        background-color: $default-active-bg-color;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+        body[dark] & {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+    }
+
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            border-color: $color;
+            color: $color;
+        }
+
+        &:hover.accent-#{$index} {
+            border-color: transparent;
+            background-color: $color;
+            color: colors.getTextColor($color);
+            @media only screen and (prefers-color-scheme: dark) {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+            body[dark] & {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+        }
+    }
+
+    &.primary {
+        background-color: $default-bg-color;
+        color: $default-fg-color;
+        border: 0;
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                background-color: $color;
+                color: colors.getTextColor($color);
+            }
+    
+            &:hover.accent-#{$index} {
+                background-color: $default-active-bg-color;
+                color: $color;
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+                body[dark] & {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+            }
+        }
+    }
+
+    // The secondary is the same as default
+    // &.secondary {
+
+    // }
+
+    &.tertiary {
+        border: 0;
+    }
+}
+
+input[type="submit"] {
+    @extend %button-base;
+    border: 0;
+
+    color: $default-fg-color;
+    background-color: $default-bg-color;
+
+    &:hover {
+        border-color: transparent;
+        color: $default-active-fg-color;
+        background-color: $default-active-bg-color;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+        body[dark] & {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+    }
+
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            background-color: $color;
+            color: colors.getTextColor($color);
+        }
+
+        &:hover.accent-#{$index} {
+            background-color: $default-active-bg-color;
+            color: $color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $color;
+                background-color: $default-active-bg-color;
+            }
+            body[dark] & {
+                color: $color;
+                background-color: $default-active-bg-color;
+            }
+        }
+    }
+
+    // The Primary is the same as default
+    // &.primary {
+    // }
+
+    &.secondary {
+        border: 1px solid currentColor;
+
+        color: currentColor;
+        background-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $default-active-fg-color;
+                background-color: $default-active-bg-color;
+            }
+            body[dark] & {
+                color: $default-active-fg-color;
+                background-color: $default-active-bg-color;
+            }
+        }
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                border-color: $color;
+                color: $color;
+            }
+
+            &:hover.accent-#{$index} {
+                border-color: transparent;
+                background-color: $color;
+                color: colors.getTextColor($color);
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+                body[dark] & {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+    &.tertiary {
+        border: 0;
+
+        color: currentColor;
+        background-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $default-active-fg-color;
+                background-color: $default-active-bg-color;
+            }
+            body[dark] & {
+                color: $default-active-fg-color;
+                background-color: $default-active-bg-color;
+            }
+        }
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                border-color: $color;
+                color: $color;
+            }
+
+            &:hover.accent-#{$index} {
+                border-color: transparent;
+                background-color: $color;
+                color: colors.getTextColor($color);
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+                body[dark] & {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}
+
+input[type="reset"] {
+    @extend %button-base;
+    border: 0;
+
+    color: colors.$text-color-dark;
+    background-color: colors.$error-color;
+
+    &:hover {
+        border-color: transparent;
+        color: colors.$error-color;
+        background-color: $default-active-bg-color;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: colors.$error-color;
+            background-color: $default-active-bg-color;
+        }
+        body[dark] & {
+            color: colors.$error-color;
+            background-color: $default-active-bg-color;
+        }
+    }
+
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            background-color: $color;
+            color: colors.getTextColor($color);
+        }
+
+        &:hover.accent-#{$index} {
+            background-color: $default-active-bg-color;
+            color: $color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $color;
+                background-color: $default-active-bg-color;
+            }
+            body[dark] & {
+                color: $color;
+                background-color: $default-active-bg-color;
+            }
+        }
+    }
+
+    // The Primary is the same as default
+    // &.primary {
+    // }
+
+    &.secondary {
+        border: 1px solid colors.$error-color;
+
+        color: colors.$error-color;
+        background-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+            color: $default-active-fg-color;
+            background-color: colors.$error-color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $default-active-fg-color;
+                background-color: colors.$error-color;
+            }
+            body[dark] & {
+                color: $default-active-fg-color;
+                background-color: colors.$error-color;
+            }
+        }
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                border-color: $color;
+                color: $color;
+            }
+
+            &:hover.accent-#{$index} {
+                border-color: transparent;
+                background-color: $color;
+                color: colors.getTextColor($color);
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+                body[dark] & {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+    &.tertiary {
+        border: 0;
+
+        color: colors.$error-color;
+        background-color: transparent;
+
+        &:hover {
+            border-color: transparent;
+            color: $default-active-fg-color;
+            background-color: colors.$error-color;
+            @media only screen and (prefers-color-scheme: dark) {
+                color: $default-active-fg-color;
+                background-color: colors.$error-color;
+            }
+            body[dark] & {
+                color: $default-active-fg-color;
+                background-color: colors.$error-color;
+            }
+        }
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                border-color: $color;
+                color: $color;
+            }
+
+            &:hover.accent-#{$index} {
+                border-color: transparent;
+                background-color: $color;
+                color: colors.getTextColor($color);
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+                body[dark] & {
+                    color: colors.getTextColor($color);
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+}
+
+.button {
+    @extend %button-base;
+    border: 1px solid currentColor;
+
+    color: $default-fg-color;
+    background-color: transparent;
+
+    &:link, &:visited {
+        color: #eee;
+    }
+
+    &:hover, &:active {
+        background-color: $default-active-bg-color;
+        color: $default-bg-color;
+    }
+
+    &:hover {
+        border-color: transparent;
+        color: $default-active-fg-color;
+        background-color: $default-active-bg-color;
+        @media only screen and (prefers-color-scheme: dark) {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+        body[dark] & {
+            color: $default-active-fg-color;
+            background-color: $default-active-bg-color;
+        }
+    }
+
+    @each $index, $color in colors.$accent-colors {
+        &.accent-#{$index} {
+            border-color: $color;
+            color: $color;
+        }
+
+        &:hover.accent-#{$index} {
+            border-color: transparent;
+            background-color: $color;
+            color: colors.getTextColor($color);
+            @media only screen and (prefers-color-scheme: dark) {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+            body[dark] & {
+                color: colors.getTextColor($color);
+                background-color: $color;
+            }
+        }
+    }
+
+    &.primary {
+        background-color: $default-bg-color;
+        color: $default-fg-color;
+        border: 0;
+
+        @each $index, $color in colors.$accent-colors {
+            &.accent-#{$index} {
+                background-color: $color;
+                color: colors.getTextColor($color);
+            }
+    
+            &:hover.accent-#{$index} {
+                background-color: $default-active-bg-color;
+                color: $color;
+                @media only screen and (prefers-color-scheme: dark) {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+                body[dark] & {
+                    color: $color;
+                    background-color: $default-active-bg-color;
+                }
+            }
+        }
+    }
+
+    // The secondary is the same as default
+    // &.secondary {
+
+    // }
+
+    &.tertiary {
+        border: 0;
+    }
+}
