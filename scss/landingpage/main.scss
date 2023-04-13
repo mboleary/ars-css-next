@@ -10,5 +10,7 @@ $img_circle_size: 256px;
 }
 
 .landing_circle > img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }

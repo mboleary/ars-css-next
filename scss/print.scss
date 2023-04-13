@@ -1,0 +1,69 @@
+// Print-related features
+
+// https://stackoverflow.com/questions/9729461/creating-page-headers-and-footers-using-css-for-print
+
+@use "layout.scss";
+
+$print-header-color: #333;
+
+#pageHeader {
+    position: running(pageHeader);
+    & img {
+        margin-right: layout.$default-margin * 2;
+    }
+    
+}
+
+#pageFooter {
+    position: running(pageFooter);
+}
+
+@media print {
+
+    .print-hidden {
+        display: none !important;
+    }
+
+    @page {
+        @top-left {
+            content: element(pageHeader);
+        }
+
+        @bottom-center {
+            content: element(pageFooter);
+        }
+        // margin: 0;
+    }
+
+    body {
+        color: black !important;
+    }
+
+    #pageHeader h1,
+    #pageHeader h2,
+    #pageHeader h3,
+    #pageHeader h4,
+    #pageHeader h5,
+    #pageHeader h6,
+    #pageHeader p {
+        color: $print-header-color !important;
+    }
+
+    #pageFooter {
+        color: $print-header-color !important;
+    }
+}
+
+@media not print {
+    .print-only {
+        display: none !important;
+    }
+
+    #pageHeader {
+        display: none;
+    }
+
+    #pageFooter {
+        display: none;
+    }
+}
