@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sass scss/main.scss build/main.css -s compressed --no-source-map
+sass src/main.scss build/main.css -s compressed --no-source-map

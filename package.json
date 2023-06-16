@@ -7,7 +7,17 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run build-dev",
+    "start": "http-server -p 8080 -a 127.0.0.1 ./demos",
+    "build-dev": "sass src/main.scss build/main.css",
+    "build": "sass src/main.scss build/main.css -s compressed --no-source-map",
+    "prepublish": "npm run build",
+    "prewatch": "http-server -p 8080 -a 127.0.0.1 ./demos &",
+    "watch": "nodemon -w ./src --exec \"npm run build-dev\"",
+    "postwatch": "pkill -f http-server",
+    "clean": "rm ./build",
+    "postinstall": "./script/install_fonts.sh"
   },
   "repository": {
     "type": "git",
@@ -22,5 +32,10 @@
   "dependencies": {
     "feather-icons": "^4.28.0",
     "pattern.css": "^1.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.22",
+    "sass": "^1.63.4"
   }
 }

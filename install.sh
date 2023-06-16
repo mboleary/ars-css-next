@@ -2,28 +2,28 @@
 
 # Create the symlinks
 
-cd demos
+# cd demos
 
-if [ -d "private_assets"]; then
-    ln -s ../private_assets
-fi
+# if [ -d "private_assets"]; then
+#     ln -s ../private_assets
+# fi
 
-ln -s ../build css
-ln -s ../font
-ln -s ../scss
-ln -s ../node_modules
+# ln -s ../build css
+# ln -s ../font
+# ln -s ../scss
+# ln -s ../node_modules
 
-cd ..
+# cd ..
 
-# Gets all of the assets and installs them
+# # Gets all of the assets and installs them
 
-npm i
+# npm i
 
-ROOT_DIR=$(pwd)
+# ROOT_DIR=$(pwd)
 
-mkdir temp
+# mkdir temp
 
-cd temp
+# cd temp
 
 wget -O leaguemono.tar.xz https://github.com/theleagueof/league-mono/releases/download/2.220/LeagueMono-2.220.tar.xz 
 
