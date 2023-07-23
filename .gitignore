@@ -10,11 +10,11 @@ node_modules/
 # Project-specific things
 
 build
-font
+font/
 leaguemono
 
 # demos/css
-demos/font
+# demos/font
 demos/scss
 demos/node_modules
 temp
