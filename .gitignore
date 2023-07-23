@@ -13,7 +13,7 @@ build
 font
 leaguemono
 
-demos/css
+# demos/css
 demos/font
 demos/scss
 demos/node_modules
