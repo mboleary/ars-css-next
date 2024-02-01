@@ -5,6 +5,7 @@
 
 // Sizes
 $banner-size: 100vh;
+$banner-short-size: 75vh;
 $title-banner-size: min(50vh, 680px); // @TODO Change this later
 
 $default-bg-color: map.get(colors.$accent-colors, 1);
@@ -39,6 +40,14 @@ $subtitle-font-size: 1.5em;
 .banner {
     @extend %gen-banner;
     height: $banner-size;
+    &:not(.no-title-resize) {
+        @extend %banner-fonts;
+    }
+}
+
+.banner-short {
+    @extend %gen-banner;
+    height: $banner-short-size;
     &:not(.no-title-resize) {
         @extend %banner-fonts;
     }

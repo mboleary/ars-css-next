@@ -25,7 +25,9 @@ $item-hover-border-color: color.adjust(map.get(colors.$accent-colors, 1), $light
 */
 
 .menu-bar {
-    font-size: 20px;
+    &:not(.small) {
+        font-size: 20px;
+    }
     &:not(.no-bg-color) {
         background-color: $menu-bg-color;
     }
@@ -41,11 +43,9 @@ ul.menu-bar {
 .menu-bar .menu-item {
     display: block;
     // Element that will be visible
-    & :first-child {
+    & > :first-child {
         padding: layout.$default-margin*2 layout.$default-margin*2 layout.$default-margin layout.$default-margin*2;
         display: block;
-        // height: 100%;
-        // width: 100%;
         &:link, &:visited {
             color: $menu-fg-color;
         }
@@ -61,4 +61,13 @@ ul.menu-bar {
     &:not(.selected):not(:hover) {
         padding-bottom: layout.$default-margin;
     }
+}
+
+.menu-bar.no-bg-color .menu-item.selected {
+    background-color: inherit;
+}
+
+header.fixed {
+    position: fixed;
+    width: 100%;
 }
