@@ -20,3 +20,5 @@ demos/node_modules
 temp
 
 private_assets
+*.tar.gz
+*.tar.xz
