@@ -240,7 +240,7 @@ body[dark] {
 // Grayscale backgrounds and foregrounds
 
 .bg-gradient-gray {
-    background: lingrad2($deg: 96deg, $color1: map.get($grays, 3), $color2: map.get($grays, 7));
+    background: lingrad2($deg: 96deg, $color1: map.get($grays, 1), $color2: map.get($grays, 3));
 }
 
 .bg-gradient-lightgray {

@@ -15,7 +15,7 @@ $item-selected-border-color: map.get(colors.$accent-colors, 1);
 $item-hover-bg-color: color.adjust($menu-bg-color, $lightness: 20%);
 $item-hover-border-color: color.adjust(map.get(colors.$accent-colors, 1), $lightness: 20%);
 
-
+$header-position-breakpoint: map.get(layout.$breakpoints, 0);
 // Menu Bar
 
 /*
@@ -61,13 +61,20 @@ ul.menu-bar {
     &:not(.selected):not(:hover) {
         padding-bottom: layout.$default-margin;
     }
+    &.title {
+        text-align: left;
+    }
 }
 
-.menu-bar.no-bg-color .menu-item.selected {
+.menu-bar.no-bg-color .menu-item.selected:not(:hover) {
     background-color: inherit;
 }
 
-header.fixed {
-    position: fixed;
-    width: 100%;
+@media only screen and (min-width: $header-position-breakpoint) {
+    header.fixed {
+        // Element should be fixed only in certain screen sizes
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
 }

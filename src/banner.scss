@@ -10,8 +10,8 @@ $title-banner-size: min(50vh, 680px); // @TODO Change this later
 
 $default-bg-color: map.get(colors.$accent-colors, 1);
 
-$title-font-size: 3em;
-$subtitle-font-size: 1.5em;
+// $title-font-size: 2em; // was 3em
+// $subtitle-font-size: 1em; //was 1.5em
 
 %gen-banner {    
     background-attachment: fixed;
@@ -28,37 +28,37 @@ $subtitle-font-size: 1.5em;
     }
 }
 
-%banner-fonts {
-    h1 {
-        font-size: $title-font-size;
-    }
-    p {
-        font-size: $subtitle-font-size;
-    }
-}
+// %banner-fonts {
+//     h1 {
+//         font-size: $title-font-size;
+//     }
+//     p {
+//         font-size: $subtitle-font-size;
+//     }
+// }
 
 .banner {
     @extend %gen-banner;
     height: $banner-size;
-    &:not(.no-title-resize) {
-        @extend %banner-fonts;
-    }
+    // &:not(.no-title-resize) {
+    //     @extend %banner-fonts;
+    // }
 }
 
 .banner-short {
     @extend %gen-banner;
     height: $banner-short-size;
-    &:not(.no-title-resize) {
-        @extend %banner-fonts;
-    }
+    // &:not(.no-title-resize) {
+    //     @extend %banner-fonts;
+    // }
 }
 
 .title-banner {
     @extend %gen-banner;
     height: $title-banner-size;
-    &:not(.no-title-resize) {
-        @extend %banner-fonts;
-    }
+    // &:not(.no-title-resize) {
+    //     @extend %banner-fonts;
+    // }
 }
 
 // This allows a footer to be inserted along with the rest of a banner
